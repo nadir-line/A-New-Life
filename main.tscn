@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b37i3i0ojx2g4" path="res://Assets/Sprites/black-background-with-a-light-shining-on-it-free-photo.jpg" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://b2rxmsv3db0qf" path="res://main.gd" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://csgcxkoxaxcdk" path="res://ui_bar.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bwsgis2ex8naw" path="res://ui_bar_left.tscn" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://0iaf8h6s0m85" path="res://ui_bar_right.tscn" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cu3s1plhhsxu3" path="res://Assets/Sprites/Small Arrow.png" id="5_lquwl"]
 
@@ -14,11 +14,11 @@ texture = ExtResource("1_ig7tw")
 centered = false
 script = ExtResource("2_h2yge")
 
-[node name="UIBarLeft" parent="." unique_id=1805744068 instance=ExtResource("3_1bvp3")]
+[node name="UIBarLeft" parent="." unique_id=521181357 instance=ExtResource("3_lquwl")]
 visible = false
-scale = Vector2(0.5, 0.54347825)
+scale = Vector2(0.75336736, 0.5434782)
 
-[node name="UIBarRight" parent="." unique_id=521181357 instance=ExtResource("4_1bvp3")]
+[node name="UIBarRight" parent="." unique_id=1663640950 instance=ExtResource("4_1bvp3")]
 visible = false
 position = Vector2(486.85, 0)
 scale = Vector2(0.6332654, 0.54347825)

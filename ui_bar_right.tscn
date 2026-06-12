@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://0iaf8h6s0m85"]
+
+[ext_resource type="Texture2D" uid="uid://fa4uv0ogh8tc" path="res://Assets/Sprites/UIBar.png" id="1_4n28x"]
+[ext_resource type="Texture2D" uid="uid://dcmbudiwm2sb4" path="res://Assets/Sprites/Arrow.png" id="2_tphif"]
+[ext_resource type="Texture2D" uid="uid://cu3s1plhhsxu3" path="res://Assets/Sprites/Small Arrow.png" id="3_dqwgp"]
+[ext_resource type="Texture2D" uid="uid://dsisximf2yhn3" path="res://icon.svg" id="4_k521y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqwgp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4n28x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tphif"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smua5"]
+bg_color = Color(0.6, 0, 0.6, 1)
+
+[node name="UIBarLeft" type="Sprite2D" unique_id=521181357]
+scale = Vector2(1.1346939, 1)
+texture = ExtResource("1_4n28x")
+centered = false
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=782640278]
+offset_right = 291.0
+offset_bottom = 700.0
+columns = 2
+
+[node name="UIBarToggle" type="Button" parent="GridContainer" unique_id=1335066007]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_dqwgp")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/UIBarToggle" unique_id=1812154352]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 4174.0
+offset_bottom = 4171.0
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("3_dqwgp")
+flip_h = true
+
+[node name="HFlowContainer" type="HFlowContainer" parent="GridContainer" unique_id=694016252]
+layout_mode = 2
+theme_override_constants/h_separation = 44
+
+[node name="Back" type="Button" parent="GridContainer/HFlowContainer" unique_id=2134899038]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_4n28x")
+text = "
+	            "
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/HFlowContainer/Back" unique_id=213319640]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 4171.0
+offset_bottom = 4171.0
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("2_tphif")
+
+[node name="Forward" type="Button" parent="GridContainer/HFlowContainer" unique_id=673241538]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_tphif")
+text = "         
+           "
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/HFlowContainer/Forward" unique_id=989381998]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 4170.0
+offset_bottom = 4171.0
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("2_tphif")
+flip_h = true
+
+[node name="VFlowContainer" type="VFlowContainer" parent="GridContainer" unique_id=1664576195]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+
+[node name="Money" type="Label" parent="GridContainer/VFlowContainer" unique_id=394315277]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00053385104, 0.00053385104, 0.00053385104, 1)
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxFlat_smua5")
+text = "Money:"
+
+[node name="Creator" type="Label" parent="GridContainer/VFlowContainer" unique_id=1731062488]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 22
+text = "Monthly Expenses:"
+
+[node name="Apperance" type="Label" parent="GridContainer/VFlowContainer" unique_id=1293807327]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 26
+text = "Appearance:"
+
+[node name="BlankSpace" type="Label" parent="GridContainer/VFlowContainer" unique_id=271152825]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "
+
+
+"
+
+[node name="Top Clothing" type="Sprite2D" parent="GridContainer/VFlowContainer" unique_id=1498163995]
+position = Vector2(16.744598, 141)
+scale = Vector2(0.485, 0.6)
+texture = ExtResource("4_k521y")
+centered = false
+
+[node name="Bottom Clothing" type="Sprite2D" parent="GridContainer/VFlowContainer" unique_id=907990632]
+position = Vector2(16.744606, 217.99998)
+scale = Vector2(0.48499998, 0.6)
+texture = ExtResource("4_k521y")
+centered = false
+
+[node name="Accessory" type="Sprite2D" parent="GridContainer/VFlowContainer" unique_id=1122174311]
+position = Vector2(83.72302, 141)
+scale = Vector2(0.48499998, 0.6)
+texture = ExtResource("4_k521y")
+centered = false
+
+[node name="Underwear" type="Sprite2D" parent="GridContainer/VFlowContainer" unique_id=2093666974]
+position = Vector2(83.72302, 218)
+scale = Vector2(0.48499998, 0.6)
+texture = ExtResource("4_k521y")
+centered = false
+
+[node name="Piercing" type="Sprite2D" parent="GridContainer/VFlowContainer" unique_id=1300612040]
+position = Vector2(151.58272, 141)
+scale = Vector2(0.48499998, 0.6)
+texture = ExtResource("4_k521y")
+centered = false
+
+[node name="Tattoo" type="Sprite2D" parent="GridContainer/VFlowContainer" unique_id=1424634938]
+position = Vector2(151.58272, 218)
+scale = Vector2(0.48499998, 0.6)
+texture = ExtResource("4_k521y")
+centered = false
+
+[node name="Day" type="Label" parent="GridContainer/VFlowContainer" unique_id=923678038]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 27
+text = "Day 1"
+
+[node name="WeekDay" type="Label" parent="GridContainer/VFlowContainer" unique_id=641511464]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 27
+text = "It's Monday "
+
+[node name="TimeOfDay" type="Label" parent="GridContainer/VFlowContainer" unique_id=2037524701]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 25
+text = "It's Morning "
+
+[node name="BlankSpace2" type="Label" parent="GridContainer/VFlowContainer" unique_id=202171520]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+
+[node name="Schedule" type="Button" parent="GridContainer/VFlowContainer" unique_id=1066997843]
+layout_mode = 2
+text = "Check your schedule"
+
+[node name="Contacts" type="Button" parent="GridContainer/VFlowContainer" unique_id=992241043]
+layout_mode = 2
+text = "Check your contacts
+"

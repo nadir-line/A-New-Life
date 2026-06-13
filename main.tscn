@@ -1,59 +1,369 @@
 [gd_scene format=3 uid="uid://d3uyj6wjhhnvm"]
 
-[ext_resource type="Texture2D" uid="uid://b37i3i0ojx2g4" path="res://Assets/Sprites/black-background-with-a-light-shining-on-it-free-photo.jpg" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://b0poexfmfgicr" path="res://Assets/Sprites/Black BG.png" id="1_5vw27"]
 [ext_resource type="Script" uid="uid://b2rxmsv3db0qf" path="res://main.gd" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://bwsgis2ex8naw" path="res://ui_bar_left.tscn" id="3_lquwl"]
-[ext_resource type="PackedScene" uid="uid://0iaf8h6s0m85" path="res://ui_bar_right.tscn" id="4_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://cu3s1plhhsxu3" path="res://Assets/Sprites/Small Arrow.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://fa4uv0ogh8tc" path="res://Assets/Sprites/UIBar.png" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://dcmbudiwm2sb4" path="res://Assets/Sprites/Arrow.png" id="7_kek77"]
+[ext_resource type="Texture2D" uid="uid://xseiffobu4co" path="res://Assets/Sprites/Save icon.png" id="8_4c57u"]
+[ext_resource type="FontFile" uid="uid://utrnq4hcaeol" path="res://Assets/Fonts/B612Mono-Regular.ttf" id="8_5vw27"]
+[ext_resource type="FontFile" uid="uid://tpeldu3r4r3v" path="res://Assets/Fonts/B612Mono-Bold.ttf" id="9_dg77c"]
+[ext_resource type="Texture2D" uid="uid://f4dwa1erb1tq" path="res://Assets/Sprites/Restart icon.png" id="9_efxa6"]
+[ext_resource type="Texture2D" uid="uid://dsisximf2yhn3" path="res://icon.svg" id="10_4c57u"]
+[ext_resource type="FontFile" uid="uid://u400eh23ki0r" path="res://Assets/Fonts/B612Mono-BoldItalic.ttf" id="10_ycdy4"]
+[ext_resource type="FontFile" uid="uid://boenmlimdhtc4" path="res://Assets/Fonts/B612Mono-Italic.ttf" id="11_w48qg"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
+bg_color = Color(0.6, 0, 0.6, 1)
 
-[node name="Main" type="Sprite2D" unique_id=227227668]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
+bg_color = Color(0.6, 0, 0.6, 1)
+
+[node name="Main" type="TextureRect" unique_id=161926023]
+offset_right = 641.33124
+offset_bottom = 349.99997
 scale = Vector2(2.9906542, 3.0857143)
-texture = ExtResource("1_ig7tw")
-centered = false
+texture = ExtResource("1_5vw27")
+expand_mode = 1
+stretch_mode = 1
 script = ExtResource("2_h2yge")
 
-[node name="UIBarLeft" parent="." unique_id=521181357 instance=ExtResource("3_lquwl")]
-visible = false
-scale = Vector2(0.75336736, 0.5434782)
-
-[node name="UIBarRight" parent="." unique_id=1663640950 instance=ExtResource("4_1bvp3")]
-visible = false
-position = Vector2(486.85, 0)
-scale = Vector2(0.6332654, 0.54347825)
-
-[node name="LeftUIBarToggle" type="Button" parent="." unique_id=1956501343]
-offset_right = 50.000015
-offset_bottom = 24.953705
-theme_override_styles/normal = SubResource("StyleBoxFlat_7mycd")
-text = "            "
-
-[node name="TextureRect" type="TextureRect" parent="LeftUIBarToggle" unique_id=1659559325]
+[node name="LeftUIBar" type="TextureRect" parent="." unique_id=1268299718]
 layout_mode = 0
-offset_left = 16.050005
-offset_top = 2.5925925
-offset_right = 1991.05
-offset_bottom = 1903.5187
-scale = Vector2(0.01, 0.01)
-texture = ExtResource("5_lquwl")
+offset_right = 245.0
+offset_bottom = 644.0
+scale = Vector2(0.544, 0.544)
+texture = ExtResource("6_7mycd")
 
-[node name="RightUIBarToggle" type="Button" parent="." unique_id=541404623]
-offset_left = 591.175
-offset_right = 641.175
-offset_bottom = 24.953701
-theme_override_styles/normal = SubResource("StyleBoxFlat_7mycd")
-text = "            "
-
-[node name="TextureRect" type="TextureRect" parent="RightUIBarToggle" unique_id=1513391354]
+[node name="GridContainer" type="GridContainer" parent="LeftUIBar" unique_id=708894386]
 layout_mode = 0
-offset_left = 16.050005
-offset_top = 2.5925925
-offset_right = 1991.05
-offset_bottom = 1903.5187
-scale = Vector2(0.01, 0.01)
-texture = ExtResource("5_lquwl")
+offset_right = 380.0
+offset_bottom = 594.0
+
+[node name="VFlowContainer2" type="VFlowContainer" parent="LeftUIBar/GridContainer" unique_id=688368692]
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/h_separation = 24
+alignment = 1
+
+[node name="Back" type="Button" parent="LeftUIBar/GridContainer/VFlowContainer2" unique_id=1514268893]
+layout_mode = 2
+text = "
+          "
+
+[node name="TextureRect" type="TextureRect" parent="LeftUIBar/GridContainer/VFlowContainer2/Back" unique_id=1871744768]
+layout_mode = 0
+offset_left = 4.3026195
+offset_top = 7.06318
+offset_right = 44.30262
+offset_bottom = 47.06318
+texture = ExtResource("7_kek77")
+expand_mode = 1
+
+[node name="Forward" type="Button" parent="LeftUIBar/GridContainer/VFlowContainer2" unique_id=1599670544]
+layout_mode = 2
+text = "
+          "
+
+[node name="TextureRect" type="TextureRect" parent="LeftUIBar/GridContainer/VFlowContainer2/Forward" unique_id=865533475]
+layout_mode = 0
+offset_left = 4.3026195
+offset_top = 7.06318
+offset_right = 44.30262
+offset_bottom = 47.06318
+texture = ExtResource("7_kek77")
+expand_mode = 1
 flip_h = true
 
-[connection signal="button_down" from="LeftUIBarToggle" to="." method="_on_left_ui_bar_toggle_button_down"]
-[connection signal="button_down" from="RightUIBarToggle" to="." method="_on_right_ui_bar_toggle_button_down"]
+[node name="HFlowContainer" type="HFlowContainer" parent="LeftUIBar/GridContainer" unique_id=2015292979]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=1919146167]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00053385104, 0.00053385104, 0.00053385104, 1)
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxFlat_dg77c")
+text = "A New Life"
+
+[node name="Versiom" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=568619282]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 16
+text = "
+v0.1"
+
+[node name="Creator" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=1811664049]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 26
+text = "By EpicPuppygirl09
+"
+
+[node name="Heterostat" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=1360879202]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 26
+text = "Heterosexuality:"
+
+[node name="Homostat" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=934303775]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 27
+text = "Homosexuality: "
+
+[node name="BlankSpace" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=1376979593]
+layout_mode = 2
+text = "                                "
+
+[node name="FemStat" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=747338957]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 27
+text = "Femininity: "
+
+[node name="MascStat" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=27824347]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 25
+text = "Masculinity: "
+
+[node name="BlankSpace2" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=917842983]
+layout_mode = 2
+text = "                                "
+
+[node name="Saves" type="Button" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=349676830]
+layout_mode = 2
+text = "                      Saves                       "
+
+[node name="TextureRect" type="TextureRect" parent="LeftUIBar/GridContainer/HFlowContainer/Saves" unique_id=813460177]
+layout_mode = 0
+offset_left = 54.64028
+offset_top = -4.0
+offset_right = 4221.64
+offset_bottom = 4163.0
+scale = Vector2(0.009, 0.009)
+texture = ExtResource("8_4c57u")
+
+[node name="Restart" type="Button" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=1720186815]
+layout_mode = 2
+text = "                      Restart                    "
+
+[node name="TextureRect" type="TextureRect" parent="LeftUIBar/GridContainer/HFlowContainer/Restart" unique_id=1041078513]
+layout_mode = 0
+offset_left = 59.046757
+offset_top = 1.0000006
+offset_right = 4226.047
+offset_bottom = 4168.0
+scale = Vector2(0.007, 0.007)
+texture = ExtResource("9_efxa6")
+
+[node name="Restart2" type="Button" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=1849167795]
+visible = false
+layout_mode = 2
+text = "
+
+
+                       Restart                    "
+
+[node name="TextureRect" type="TextureRect" parent="LeftUIBar/GridContainer/HFlowContainer/Restart2" unique_id=1366967166]
+layout_mode = 0
+offset_left = 59.046757
+offset_top = 1.0000006
+offset_right = 4226.047
+offset_bottom = 4168.0
+scale = Vector2(0.007, 0.007)
+texture = ExtResource("9_efxa6")
+
+[node name="RightUIBar" type="TextureRect" parent="." unique_id=1809964304]
+layout_mode = 0
+offset_left = 508.25
+offset_right = 754.1139
+offset_bottom = 644.0
+scale = Vector2(0.544, 0.544)
+texture = ExtResource("6_7mycd")
+flip_h = true
+
+[node name="VFlowContainer" type="VFlowContainer" parent="RightUIBar" unique_id=585112262]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 0
+offset_right = 244.63464
+offset_bottom = 600.0
+
+[node name="Money" type="Label" parent="RightUIBar/VFlowContainer" unique_id=1459425247]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00053385104, 0.00053385104, 0.00053385104, 1)
+theme_override_font_sizes/font_size = 44
+theme_override_styles/focus = SubResource("StyleBoxFlat_efxa6")
+text = "Money:"
+
+[node name="Creator" type="Label" parent="RightUIBar/VFlowContainer" unique_id=1767129577]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 22
+text = "Monthly Expenses:"
+
+[node name="Apperance" type="Label" parent="RightUIBar/VFlowContainer" unique_id=1017403714]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 26
+text = "Appearance:"
+
+[node name="BlankSpace" type="Label" parent="RightUIBar/VFlowContainer" unique_id=909022732]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "
+
+
+"
+
+[node name="Top Clothing" type="Sprite2D" parent="RightUIBar/VFlowContainer" unique_id=1705328915]
+position = Vector2(16.59581, 141.18666)
+scale = Vector2(0.5, 0.52125883)
+texture = ExtResource("10_4c57u")
+centered = false
+
+[node name="Bottom Clothing" type="Sprite2D" parent="RightUIBar/VFlowContainer" unique_id=707822122]
+position = Vector2(16.595764, 216.84366)
+scale = Vector2(0.5, 0.52125883)
+texture = ExtResource("10_4c57u")
+centered = false
+
+[node name="Accessory" type="Sprite2D" parent="RightUIBar/VFlowContainer" unique_id=217139139]
+position = Vector2(95.272385, 139.99522)
+scale = Vector2(0.5, 0.52125883)
+texture = ExtResource("10_4c57u")
+centered = false
+
+[node name="Underwear" type="Sprite2D" parent="RightUIBar/VFlowContainer" unique_id=2096521226]
+position = Vector2(95.27232, 215.65222)
+scale = Vector2(0.5, 0.52125883)
+texture = ExtResource("10_4c57u")
+centered = false
+
+[node name="Piercing" type="Sprite2D" parent="RightUIBar/VFlowContainer" unique_id=303218508]
+position = Vector2(170.87555, 139.99522)
+scale = Vector2(0.5, 0.52125883)
+texture = ExtResource("10_4c57u")
+centered = false
+
+[node name="Tattoo" type="Sprite2D" parent="RightUIBar/VFlowContainer" unique_id=1989821548]
+position = Vector2(170.87549, 215.65222)
+scale = Vector2(0.5, 0.52125883)
+texture = ExtResource("10_4c57u")
+centered = false
+
+[node name="Day" type="Label" parent="RightUIBar/VFlowContainer" unique_id=53442158]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 27
+text = "Day 1"
+
+[node name="WeekDay" type="Label" parent="RightUIBar/VFlowContainer" unique_id=785585716]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 27
+text = "It's Monday "
+
+[node name="TimeOfDay" type="Label" parent="RightUIBar/VFlowContainer" unique_id=1017245625]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+theme_override_font_sizes/font_size = 25
+text = "It's Morning "
+
+[node name="BlankSpace2" type="Label" parent="RightUIBar/VFlowContainer" unique_id=259299769]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+
+[node name="Schedule" type="Button" parent="RightUIBar/VFlowContainer" unique_id=438358786]
+layout_mode = 2
+text = "Check your schedule"
+
+[node name="Contacts" type="Button" parent="RightUIBar/VFlowContainer" unique_id=498682614]
+layout_mode = 2
+text = "Check your contacts
+"
+
+[node name="Disclaimer" type="RichTextLabel" parent="." unique_id=1609316767]
+layout_mode = 0
+offset_left = 143.11249
+offset_top = 35.324074
+offset_right = 508.25
+offset_bottom = 239.32407
+theme_override_fonts/normal_font = ExtResource("8_5vw27")
+theme_override_fonts/bold_font = ExtResource("9_dg77c")
+theme_override_fonts/bold_italics_font = ExtResource("10_ycdy4")
+theme_override_fonts/italics_font = ExtResource("11_w48qg")
+text = "Disclaimer 1
+
+This game contains sexual, 
+political and satirical content. 
+Do not build your personal views 
+on sex, relationships, politics, 
+sexual orientation, 
+gender identity, or race relations 
+from such a game"
+
+[node name="NextSlide" type="Button" parent="Disclaimer" unique_id=117958231]
+layout_mode = 0
+offset_left = 9.696885
+offset_top = 220.37036
+offset_right = 245.0969
+offset_bottom = 297.49997
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_colors/font_focus_color = Color(0, 0.9490196, 0.9490196, 1)
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Continue"
+
+[node name="Disclaimer4" type="Label" parent="." unique_id=1810153193]
+layout_mode = 0
+offset_left = 677.77814
+offset_top = 17.175926
+offset_right = 1004.1281
+offset_bottom = 7322.176
+theme_override_fonts/font = ExtResource("8_5vw27")
+theme_override_font_sizes/font_size = 19
+text = "Disclaimer 1
+
+This game contains sexual, political and satirical content. 
+Do not build your personal views on sex, relationships, politics, 
+sexual orientation, gender identity, or race relations 
+from such a game.
+
+Disclaimer 2
+
+All characters within this game are at least eighteen years old.
+
+Disclaimer 3
+
+As this game can optionally inculde NSFW content, its use is
+restricted to those at or above the legal age to consume such content 
+within their state or country.
+Please click the correct button below (answer honestly!) 
+to begin the game."
+autowrap_mode = 1
+
+[node name="Of legal age" type="Button" parent="Disclaimer4" unique_id=1552469384]
+layout_mode = 0
+offset_top = 254.07407
+offset_right = 352.0
+offset_bottom = 285.07407
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 13
+text = "I am of legal age to consume pornographic content"
+
+[node name="Of legal age2" type="Button" parent="Disclaimer4" unique_id=850843004]
+layout_mode = 0
+offset_top = 276.43518
+offset_right = 352.0
+offset_bottom = 307.43518
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 13
+text = "I am not of legal age to consume pornographic content"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Disclaimer4" unique_id=685143328]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="button_down" from="Disclaimer/NextSlide" to="." method="_on_next_slide_button_down"]
+[connection signal="button_down" from="Disclaimer4/Of legal age" to="." method="_on_of_legal_age_button_down"]
+[connection signal="button_down" from="Disclaimer4/Of legal age2" to="." method="_on_of_legal_age_2_button_down"]

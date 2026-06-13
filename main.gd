@@ -1,12 +1,10 @@
-extends Sprite2D
+extends TextureRect
 
+func _on_next_slide_button_down() -> void:
+	pass # Replace with function body.
 
+func _on_of_legal_age_button_down() -> void:
+	pass # Replace with function body.
 
-func _on_left_ui_bar_toggle_button_down() -> void:
-	$LeftUIBarToggle.visible = false
-	$UIBarLeft.visible = true 
-
-
-func _on_right_ui_bar_toggle_button_down() -> void:
-	$RightUIBarToggle.visible = false
-	$UIBarRight.visible = true 
+func _on_of_legal_age_2_button_down() -> void:
+	pass # Replace with function body.

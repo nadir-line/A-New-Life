@@ -6,11 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dcmbudiwm2sb4" path="res://Assets/Sprites/Arrow.png" id="7_kek77"]
 [ext_resource type="Texture2D" uid="uid://xseiffobu4co" path="res://Assets/Sprites/Save icon.png" id="8_4c57u"]
 [ext_resource type="FontFile" uid="uid://utrnq4hcaeol" path="res://Assets/Fonts/B612Mono-Regular.ttf" id="8_5vw27"]
-[ext_resource type="FontFile" uid="uid://tpeldu3r4r3v" path="res://Assets/Fonts/B612Mono-Bold.ttf" id="9_dg77c"]
 [ext_resource type="Texture2D" uid="uid://f4dwa1erb1tq" path="res://Assets/Sprites/Restart icon.png" id="9_efxa6"]
+[ext_resource type="VideoStream" uid="uid://b2tjv7uemtd7w" path="res://Assets/Videos/rick-roll-video-meme-template-video-1da252ec.ogv" id="9_kek77"]
 [ext_resource type="Texture2D" uid="uid://dsisximf2yhn3" path="res://icon.svg" id="10_4c57u"]
-[ext_resource type="FontFile" uid="uid://u400eh23ki0r" path="res://Assets/Fonts/B612Mono-BoldItalic.ttf" id="10_ycdy4"]
-[ext_resource type="FontFile" uid="uid://boenmlimdhtc4" path="res://Assets/Fonts/B612Mono-Italic.ttf" id="11_w48qg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
 bg_color = Color(0.6, 0, 0.6, 1)
@@ -18,7 +16,9 @@ bg_color = Color(0.6, 0, 0.6, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
 bg_color = Color(0.6, 0, 0.6, 1)
 
-[node name="Main" type="TextureRect" unique_id=161926023]
+[sub_resource type="Theme" id="Theme_5vw27"]
+
+[node name="Main" type="TextureRect" unique_id=161926023 node_paths=PackedStringArray("Disclaimer", "TestDemo", "Film")]
 offset_right = 641.33124
 offset_bottom = 349.99997
 scale = Vector2(2.9906542, 3.0857143)
@@ -26,6 +26,9 @@ texture = ExtResource("1_5vw27")
 expand_mode = 1
 stretch_mode = 1
 script = ExtResource("2_h2yge")
+Disclaimer = NodePath("ScrollContainer/Control/Disclaimer")
+TestDemo = NodePath("ScrollContainer/Control/DemoScene")
+Film = NodePath("ScrollContainer/Control/Disclaimer/VideoStreamPlayer")
 
 [node name="LeftUIBar" type="TextureRect" parent="." unique_id=1268299718]
 layout_mode = 0
@@ -282,16 +285,24 @@ layout_mode = 2
 text = "Check your contacts
 "
 
-[node name="Disclaimer" type="RichTextLabel" parent="." unique_id=1609316767]
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=404149367]
 layout_mode = 0
-offset_left = 143.11249
-offset_top = 35.324074
+offset_left = 133.41562
 offset_right = 508.25
-offset_bottom = 239.32407
-theme_override_fonts/normal_font = ExtResource("8_5vw27")
-theme_override_fonts/bold_font = ExtResource("9_dg77c")
-theme_override_fonts/bold_italics_font = ExtResource("10_ycdy4")
-theme_override_fonts/italics_font = ExtResource("11_w48qg")
+offset_bottom = 326.3426
+theme = SubResource("Theme_5vw27")
+
+[node name="Control" type="Control" parent="ScrollContainer" unique_id=1183575468]
+custom_minimum_size = Vector2(500, 800)
+layout_mode = 2
+
+[node name="Disclaimer" type="Label" parent="ScrollContainer/Control" unique_id=1029099582]
+layout_mode = 0
+offset_left = 8.024998
+offset_top = 52.175926
+offset_right = 737.025
+offset_bottom = 647.1759
+theme_override_fonts/font = ExtResource("8_5vw27")
 text = "Disclaimer 1
 
 This game contains sexual, 
@@ -300,70 +311,105 @@ Do not build your personal views
 on sex, relationships, politics, 
 sexual orientation, 
 gender identity, or race relations 
-from such a game"
-
-[node name="NextSlide" type="Button" parent="Disclaimer" unique_id=117958231]
-layout_mode = 0
-offset_left = 9.696885
-offset_top = 220.37036
-offset_right = 245.0969
-offset_bottom = 297.49997
-theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
-theme_override_colors/font_focus_color = Color(0, 0.9490196, 0.9490196, 1)
-theme_override_fonts/font = ExtResource("8_5vw27")
-text = "Continue"
-
-[node name="Disclaimer4" type="Label" parent="." unique_id=1810153193]
-layout_mode = 0
-offset_left = 677.77814
-offset_top = 17.175926
-offset_right = 1004.1281
-offset_bottom = 7322.176
-theme_override_fonts/font = ExtResource("8_5vw27")
-theme_override_font_sizes/font_size = 19
-text = "Disclaimer 1
-
-This game contains sexual, political and satirical content. 
-Do not build your personal views on sex, relationships, politics, 
-sexual orientation, gender identity, or race relations 
 from such a game.
 
 Disclaimer 2
 
-All characters within this game are at least eighteen years old.
+All characters within this game 
+are at least eighteen years old.
 
 Disclaimer 3
 
-As this game can optionally inculde NSFW content, its use is
-restricted to those at or above the legal age to consume such content 
-within their state or country.
-Please click the correct button below (answer honestly!) 
+As this game can optionally
+ inculde NSFW content, its use is
+restricted to those at or above 
+the legal age to consume such 
+content within their state or 
+country.
+Please click the correct button 
+below (answer honestly!) 
 to begin the game."
-autowrap_mode = 1
 
-[node name="Of legal age" type="Button" parent="Disclaimer4" unique_id=1552469384]
+[node name="Of legal age" type="Button" parent="ScrollContainer/Control/Disclaimer" unique_id=1552469384]
 layout_mode = 0
-offset_top = 254.07407
+offset_top = 625.9444
 offset_right = 352.0
-offset_bottom = 285.07407
+offset_bottom = 656.9444
 theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 13
 text = "I am of legal age to consume pornographic content"
 
-[node name="Of legal age2" type="Button" parent="Disclaimer4" unique_id=850843004]
+[node name="Not of legal age" type="Button" parent="ScrollContainer/Control/Disclaimer" unique_id=850843004]
 layout_mode = 0
-offset_top = 276.43518
-offset_right = 352.0
-offset_bottom = 307.43518
+offset_left = -8.025009
+offset_top = 657.05554
+offset_right = 343.97498
+offset_bottom = 688.05554
 theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 13
 text = "I am not of legal age to consume pornographic content"
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Disclaimer4" unique_id=685143328]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="ScrollContainer/Control/Disclaimer" unique_id=685143328]
+visible = false
+top_level = true
+z_index = 3
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1902.0
+offset_bottom = 1081.0
+stream = ExtResource("9_kek77")
+volume_db = -15.0
+expand = true
 
-[connection signal="button_down" from="Disclaimer/NextSlide" to="." method="_on_next_slide_button_down"]
-[connection signal="button_down" from="Disclaimer4/Of legal age" to="." method="_on_of_legal_age_button_down"]
-[connection signal="button_down" from="Disclaimer4/Of legal age2" to="." method="_on_of_legal_age_2_button_down"]
+[node name="DemoScene" type="Label" parent="ScrollContainer/Control" unique_id=699897056]
+visible = false
+layout_mode = 0
+offset_left = 19.728123
+offset_top = 52.175926
+offset_right = 394.72812
+offset_bottom = 785.1759
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "You’re walking down the dimly lit 
+streets at night on your way home. 
+Since it’s getting awfully fast 
+dark, you decide to take a shortcut 
+through one of the allies you’re
+passing by. As you walk past a row 
+of dumpsters you see a gang of 
+skinheads, some leaning against 
+the wall others just huddling 
+around a burning trash bin. As you 
+get closer the biggest one of them 
+notices you and calls out: “Hey,
+what’s your business here tranny? 
+Don’t you know you’re not welcome 
+around these parts?” His gaze and 
+aggressive stance makes it very 
+obvious that you still don’t fully 
+pass yet and can be clocked by 
+disgusting men like him. Just as 
+you’re about to reply another one
+of the group speaks up in a deep 
+growly voice “Piss off to your 
+jewish friends before we beat the 
+shit out of you, you sick fuck. 
+Or wait… maybe we might just do 
+that anyways!” You shiver at 
+hearing the men’s cruel laughter.
+How will you respond?
+Run away
+Prepare for a fight
+Try to argue your way out
+"
+
+[node name="End Demo Scene" type="Button" parent="ScrollContainer/Control/DemoScene" unique_id=1125201393]
+layout_mode = 0
+offset_left = -28.75625
+offset_top = 722.03705
+offset_right = 323.24374
+offset_bottom = 753.03705
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 13
+text = "End tech demo"
+
+[connection signal="button_down" from="ScrollContainer/Control/Disclaimer/Of legal age" to="." method="_on_of_legal_age_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Disclaimer/Not of legal age" to="." method="_on_not_of_legal_age_button_down"]

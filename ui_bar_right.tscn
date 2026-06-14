@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://0iaf8h6s0m85"]
 
-[ext_resource type="Texture2D" uid="uid://fa4uv0ogh8tc" path="res://Assets/Sprites/UIBar.png" id="1_4n28x"]
-[ext_resource type="Texture2D" uid="uid://dcmbudiwm2sb4" path="res://Assets/Sprites/Arrow.png" id="2_tphif"]
-[ext_resource type="Texture2D" uid="uid://cu3s1plhhsxu3" path="res://Assets/Sprites/Small Arrow.png" id="3_dqwgp"]
+[ext_resource type="Texture2D" uid="uid://fa4uv0ogh8tc" path="res://Assets/Sprites/UI/UIBar.png" id="1_4n28x"]
+[ext_resource type="Texture2D" uid="uid://dcmbudiwm2sb4" path="res://Assets/Sprites/UI/Arrow.png" id="2_tphif"]
+[ext_resource type="Texture2D" uid="uid://cu3s1plhhsxu3" path="res://Assets/Sprites/UI/Small Arrow.png" id="3_dqwgp"]
 [ext_resource type="Texture2D" uid="uid://dsisximf2yhn3" path="res://icon.svg" id="4_k521y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqwgp"]

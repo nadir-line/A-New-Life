@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0poexfmfgicr"
-path="res://.godot/imported/Black BG.png-bd28ee597b6b49e766d43ebd8a041563.ctex"
+uid="uid://xseiffobu4co"
+path="res://.godot/imported/Save icon.png-d39e38682f26c86d14a4c8093a27e889.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Black BG.png"
-dest_files=["res://.godot/imported/Black BG.png-bd28ee597b6b49e766d43ebd8a041563.ctex"]
+source_file="res://Assets/Sprites/UI/Save icon.png"
+dest_files=["res://.godot/imported/Save icon.png-d39e38682f26c86d14a4c8093a27e889.ctex"]
 
 [params]
 

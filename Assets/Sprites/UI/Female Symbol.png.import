@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xseiffobu4co"
-path="res://.godot/imported/Save icon.png-911b3531c9a0889de5bd3dbe31e97e25.ctex"
+uid="uid://bphqd4x7j4ssv"
+path="res://.godot/imported/Female Symbol.png-06c939f68598d7294c85e5a281dece57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Save icon.png"
-dest_files=["res://.godot/imported/Save icon.png-911b3531c9a0889de5bd3dbe31e97e25.ctex"]
+source_file="res://Assets/Sprites/UI/Female Symbol.png"
+dest_files=["res://.godot/imported/Female Symbol.png-06c939f68598d7294c85e5a281dece57.ctex"]
 
 [params]
 

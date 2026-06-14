@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu3s1plhhsxu3"
-path="res://.godot/imported/Small Arrow.png-b0d5d72c63861c928b83fd551d153a65.ctex"
+uid="uid://b0poexfmfgicr"
+path="res://.godot/imported/Black BG.png-86c6bfce9e95bcc7371b6d60ceea0238.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Small Arrow.png"
-dest_files=["res://.godot/imported/Small Arrow.png-b0d5d72c63861c928b83fd551d153a65.ctex"]
+source_file="res://Assets/Sprites/BG/Black BG.png"
+dest_files=["res://.godot/imported/Black BG.png-86c6bfce9e95bcc7371b6d60ceea0238.ctex"]
 
 [params]
 

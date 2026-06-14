@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bwsgis2ex8naw"]
 
-[ext_resource type="Texture2D" uid="uid://fa4uv0ogh8tc" path="res://Assets/Sprites/UIBar.png" id="1_ed7q7"]
-[ext_resource type="Texture2D" uid="uid://dcmbudiwm2sb4" path="res://Assets/Sprites/Arrow.png" id="2_bm261"]
-[ext_resource type="Texture2D" uid="uid://cu3s1plhhsxu3" path="res://Assets/Sprites/Small Arrow.png" id="3_dspiu"]
-[ext_resource type="Texture2D" uid="uid://xseiffobu4co" path="res://Assets/Sprites/Save icon.png" id="4_p0iuq"]
-[ext_resource type="Texture2D" uid="uid://f4dwa1erb1tq" path="res://Assets/Sprites/Restart icon.png" id="5_kwgem"]
+[ext_resource type="Texture2D" uid="uid://fa4uv0ogh8tc" path="res://Assets/Sprites/UI/UIBar.png" id="1_ed7q7"]
+[ext_resource type="Texture2D" uid="uid://dcmbudiwm2sb4" path="res://Assets/Sprites/UI/Arrow.png" id="2_bm261"]
+[ext_resource type="Texture2D" uid="uid://cu3s1plhhsxu3" path="res://Assets/Sprites/UI/Small Arrow.png" id="3_dspiu"]
+[ext_resource type="Texture2D" uid="uid://xseiffobu4co" path="res://Assets/Sprites/UI/Save icon.png" id="4_p0iuq"]
+[ext_resource type="Texture2D" uid="uid://f4dwa1erb1tq" path="res://Assets/Sprites/UI/Restart icon.png" id="5_kwgem"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gru3"]
 

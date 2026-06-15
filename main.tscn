@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d3uyj6wjhhnvm"]
 
 [ext_resource type="Texture2D" uid="uid://b0poexfmfgicr" path="res://Assets/Sprites/BG/Black BG.png" id="1_5vw27"]
-[ext_resource type="Script" uid="uid://b2rxmsv3db0qf" path="res://main.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://b2rxmsv3db0qf" path="res://Code/main.gd" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://fa4uv0ogh8tc" path="res://Assets/Sprites/UI/UIBar.png" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://dcmbudiwm2sb4" path="res://Assets/Sprites/UI/Arrow.png" id="7_kek77"]
 [ext_resource type="Texture2D" uid="uid://xseiffobu4co" path="res://Assets/Sprites/UI/Save icon.png" id="8_4c57u"]
@@ -11,7 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://dsisximf2yhn3" path="res://icon.svg" id="10_4c57u"]
 [ext_resource type="Texture2D" uid="uid://bphqd4x7j4ssv" path="res://Assets/Sprites/UI/Female Symbol.png" id="10_efxa6"]
 [ext_resource type="Texture2D" uid="uid://du06osj848eqe" path="res://Assets/Sprites/UI/Male Symbol.png" id="11_dg77c"]
-[ext_resource type="Texture2D" uid="uid://dohbp1vtrj62f" path="res://Assets/Sprites/Places/Single Bedroom.jpg" id="12_dg77c"]
+[ext_resource type="Texture2D" uid="uid://dohbp1vtrj62f" path="res://Assets/Sprites/Places/House/Single Bedroom.jpg" id="12_dg77c"]
+[ext_resource type="Script" uid="uid://brktocq1davgn" path="res://Code/Areas/Areas.gd" id="12_ycdy4"]
+[ext_resource type="Script" uid="uid://djh6lydpfqqw7" path="res://computer.gd" id="14_074og"]
+[ext_resource type="Texture2D" uid="uid://crnrl4hio2qey" path="res://Assets/Sprites/Places/House/Bathroom.jpg" id="14_w48qg"]
+[ext_resource type="Texture2D" uid="uid://s0r7wb807bul" path="res://Assets/Sprites/Places/House/Kitchen.jpg" id="15_vivmo"]
+[ext_resource type="Texture2D" uid="uid://y0jv1wgnhkk3" path="res://Assets/Sprites/Places/House/Living Room.jpg" id="16_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://gu3hl3vtg6d7" path="res://Assets/Sprites/Places/House/Foyer.png" id="17_yaehf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
 bg_color = Color(0.6, 0, 0.6, 1)
@@ -21,7 +27,7 @@ bg_color = Color(0.6, 0, 0.6, 1)
 
 [sub_resource type="Theme" id="Theme_5vw27"]
 
-[node name="Main" type="TextureRect" unique_id=161926023 node_paths=PackedStringArray("FemStat", "MascStat", "HeteroStat", "HomoStat", "MoneyStat", "MonthlyExpensesStat", "Day", "WeekDay", "TimeOfDay", "Scrollbar", "Disclaimer", "IntroOptions", "Intro", "Film", "GenderChocie", "Name", "NameConfirmation")]
+[node name="Main" type="TextureRect" unique_id=161926023 node_paths=PackedStringArray("FemStat", "MascStat", "HornyStat", "HeteroStat", "HomoStat", "MoneyStat", "MonthlyExpensesStat", "Day", "WeekDay", "TimeOfDay", "Scrollbar", "Disclaimer", "IntroOptions", "Intro", "Mirror", "SingleBedroom", "HouseButtons", "Film", "GenderChocie", "Name", "NameConfirmation")]
 offset_right = 641.33124
 offset_bottom = 349.99997
 scale = Vector2(2.9906542, 3.0857143)
@@ -31,6 +37,7 @@ stretch_mode = 1
 script = ExtResource("2_h2yge")
 FemStat = NodePath("LeftUIBar/GridContainer/HFlowContainer/FemStat")
 MascStat = NodePath("LeftUIBar/GridContainer/HFlowContainer/MascStat")
+HornyStat = NodePath("LeftUIBar/GridContainer/HFlowContainer/HornyStat")
 HeteroStat = NodePath("LeftUIBar/GridContainer/HFlowContainer/Heterostat")
 HomoStat = NodePath("LeftUIBar/GridContainer/HFlowContainer/Homostat")
 MoneyStat = NodePath("RightUIBar/VFlowContainer/Money")
@@ -39,13 +46,16 @@ Day = NodePath("RightUIBar/VFlowContainer/Day")
 WeekDay = NodePath("RightUIBar/VFlowContainer/WeekDay")
 TimeOfDay = NodePath("RightUIBar/VFlowContainer/TimeOfDay")
 Scrollbar = NodePath("ScrollContainer")
-Disclaimer = NodePath("ScrollContainer/Control/Disclaimer")
-IntroOptions = NodePath("ScrollContainer/Control/IntroOptions")
-Intro = NodePath("ScrollContainer/Control/SingleBedroom")
-Film = NodePath("ScrollContainer/Control/Disclaimer/VideoStreamPlayer")
-GenderChocie = NodePath("ScrollContainer/Control/IntroOptions/GenderChoice")
-Name = NodePath("ScrollContainer/Control/IntroOptions/LineEdit")
-NameConfirmation = NodePath("ScrollContainer/Control/IntroOptions/YourName")
+Disclaimer = NodePath("ScrollContainer/Control/Intro/Disclaimer")
+IntroOptions = NodePath("ScrollContainer/Control/Intro/IntroOptions")
+Intro = NodePath("ScrollContainer/Control/Intro/Intro")
+Mirror = NodePath("ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions/Computer")
+SingleBedroom = NodePath("ScrollContainer/Control/Areas/House/SingleBedroom")
+HouseButtons = NodePath("ScrollContainer/Control/Areas/HouseButtons")
+Film = NodePath("ScrollContainer/Control/Intro/Disclaimer/VideoStreamPlayer")
+GenderChocie = NodePath("ScrollContainer/Control/Intro/IntroOptions/GenderChoice")
+Name = NodePath("ScrollContainer/Control/Intro/IntroOptions/LineEdit")
+NameConfirmation = NodePath("ScrollContainer/Control/Intro/IntroOptions/YourName")
 
 [node name="LeftUIBar" type="TextureRect" parent="." unique_id=1268299718]
 layout_mode = 0
@@ -130,20 +140,21 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 22
 text = "Homosexuality: "
 
-[node name="BlankSpace" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=1376979593]
+[node name="HornyStat" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=1376979593]
 layout_mode = 2
-text = "                                "
+theme_override_font_sizes/font_size = 22
+text = "Hornieness:"
 
 [node name="FemStat" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=747338957]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 27
+theme_override_font_sizes/font_size = 23
 text = "Femininity: "
 
 [node name="MascStat" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=27824347]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 21
 text = "Masculinity: "
 
 [node name="BlankSpace2" type="Label" parent="LeftUIBar/GridContainer/HFlowContainer" unique_id=917842983]
@@ -313,11 +324,12 @@ theme = SubResource("Theme_5vw27")
 custom_minimum_size = Vector2(500, 1000)
 layout_mode = 2
 
-[node name="Disclaimer" type="Label" parent="ScrollContainer/Control" unique_id=1029099582]
-layout_mode = 0
-offset_left = 8.024998
-offset_top = 52.175926
-offset_right = 373.025
+[node name="Intro" type="Node2D" parent="ScrollContainer/Control" unique_id=1196246308]
+
+[node name="Disclaimer" type="Label" parent="ScrollContainer/Control/Intro" unique_id=1029099582]
+offset_left = 8.025009
+offset_top = 52.175922
+offset_right = 373.02502
 offset_bottom = 647.1759
 theme_override_fonts/font = ExtResource("8_5vw27")
 text = "Disclaimer 1
@@ -347,7 +359,7 @@ Please click the correct button
 below (answer honestly!) 
 to begin the game."
 
-[node name="Of legal age" type="Button" parent="ScrollContainer/Control/Disclaimer" unique_id=1552469384]
+[node name="Of legal age" type="Button" parent="ScrollContainer/Control/Intro/Disclaimer" unique_id=1552469384]
 layout_mode = 0
 offset_top = 625.9444
 offset_right = 352.0
@@ -356,7 +368,7 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 13
 text = "I am of legal age to consume pornographic content"
 
-[node name="Not of legal age" type="Button" parent="ScrollContainer/Control/Disclaimer" unique_id=850843004]
+[node name="Not of legal age" type="Button" parent="ScrollContainer/Control/Intro/Disclaimer" unique_id=850843004]
 layout_mode = 0
 offset_left = -8.025009
 offset_top = 657.05554
@@ -366,7 +378,7 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 13
 text = "I am not of legal age to consume pornographic content"
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="ScrollContainer/Control/Disclaimer" unique_id=685143328]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="ScrollContainer/Control/Intro/Disclaimer" unique_id=685143328]
 visible = false
 top_level = true
 z_index = 3
@@ -377,11 +389,10 @@ stream = ExtResource("9_kek77")
 volume_db = -15.0
 expand = true
 
-[node name="IntroOptions" type="Label" parent="ScrollContainer/Control" unique_id=36155927]
+[node name="IntroOptions" type="Label" parent="ScrollContainer/Control/Intro" unique_id=36155927]
 visible = false
-layout_mode = 0
 offset_left = 8.025009
-offset_top = 52.175922
+offset_top = 52.17592
 offset_right = 373.02502
 offset_bottom = 647.1759
 theme_override_fonts/font = ExtResource("8_5vw27")
@@ -390,7 +401,7 @@ last year of university.
 What's your name and assigned 
 gender at birth anyways?"
 
-[node name="LineEdit" type="LineEdit" parent="ScrollContainer/Control/IntroOptions" unique_id=1178080576]
+[node name="LineEdit" type="LineEdit" parent="ScrollContainer/Control/Intro/IntroOptions" unique_id=1178080576]
 layout_mode = 0
 offset_left = 11.703125
 offset_top = 102.08333
@@ -398,9 +409,9 @@ offset_right = 227.70937
 offset_bottom = 133.08333
 theme_override_fonts/font = ExtResource("8_5vw27")
 
-[node name="GenderChoice" type="Node2D" parent="ScrollContainer/Control/IntroOptions" unique_id=777110346]
+[node name="GenderChoice" type="Node2D" parent="ScrollContainer/Control/Intro/IntroOptions" unique_id=777110346]
 
-[node name="Afab" type="Button" parent="ScrollContainer/Control/IntroOptions/GenderChoice" unique_id=1125201393]
+[node name="Afab" type="Button" parent="ScrollContainer/Control/Intro/IntroOptions/GenderChoice" unique_id=1125201393]
 offset_left = 22.403122
 offset_top = 156.2037
 offset_right = 1531.4031
@@ -410,7 +421,7 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 13
 icon = ExtResource("10_efxa6")
 
-[node name="Amab" type="Button" parent="ScrollContainer/Control/IntroOptions/GenderChoice" unique_id=364576723]
+[node name="Amab" type="Button" parent="ScrollContainer/Control/Intro/IntroOptions/GenderChoice" unique_id=364576723]
 offset_left = 241.08437
 offset_top = 153.93518
 offset_right = 1529.0844
@@ -420,7 +431,7 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 13
 icon = ExtResource("11_dg77c")
 
-[node name="YourName" type="Label" parent="ScrollContainer/Control/IntroOptions" unique_id=866655786]
+[node name="YourName" type="Label" parent="ScrollContainer/Control/Intro/IntroOptions" unique_id=866655786]
 layout_mode = 0
 offset_left = 19.728123
 offset_top = 242.08334
@@ -428,7 +439,7 @@ offset_right = 394.72812
 offset_bottom = 298.14813
 theme_override_fonts/font = ExtResource("8_5vw27")
 
-[node name="SexOption" type="Label" parent="ScrollContainer/Control/IntroOptions" unique_id=1536581736]
+[node name="SexOption" type="Label" parent="ScrollContainer/Control/Intro/IntroOptions" unique_id=1536581736]
 layout_mode = 0
 offset_left = 11.703114
 offset_top = 298.14813
@@ -437,7 +448,7 @@ offset_bottom = 354.2129
 theme_override_fonts/font = ExtResource("8_5vw27")
 text = "Enable sexual Scenes?"
 
-[node name="Sex" type="Button" parent="ScrollContainer/Control/IntroOptions/SexOption" unique_id=959039516]
+[node name="Sex" type="Button" parent="ScrollContainer/Control/Intro/IntroOptions/SexOption" unique_id=959039516]
 layout_mode = 0
 offset_left = 10.699995
 offset_top = 58.333366
@@ -448,7 +459,7 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 500
 text = "Yes"
 
-[node name="NoSex" type="Button" parent="ScrollContainer/Control/IntroOptions/SexOption" unique_id=1103478039]
+[node name="NoSex" type="Button" parent="ScrollContainer/Control/Intro/IntroOptions/SexOption" unique_id=1103478039]
 layout_mode = 0
 offset_left = 229.38124
 offset_top = 58.33338
@@ -459,7 +470,7 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 500
 text = "No"
 
-[node name="ToIntro" type="Button" parent="ScrollContainer/Control/IntroOptions" unique_id=324399788]
+[node name="ToIntro" type="Button" parent="ScrollContainer/Control/Intro/IntroOptions" unique_id=324399788]
 layout_mode = 0
 offset_left = 130.07185
 offset_top = 477.68518
@@ -470,28 +481,107 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 500
 text = "Begin"
 
-[node name="SingleBedroom" type="Label" parent="ScrollContainer/Control" unique_id=2046731425]
+[node name="Intro" type="Label" parent="ScrollContainer/Control/Intro" unique_id=717232496]
 visible = false
+offset_left = 8.025009
+offset_top = 52.17592
+offset_right = 356.77814
+offset_bottom = 437.5
+text = "Placeholder         Placeholdr        Placeholder
+
+-Something about character having identity
+crisis
+
+-Character makes plans to explore their 
+identity more from now on to avoid another
+crisis"
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Intro/Intro" unique_id=465045160]
 layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="Areas" type="Node2D" parent="ScrollContainer/Control" unique_id=1380009074 node_paths=PackedStringArray("Scrollbar", "SingleBedroom", "Bathroom", "Kitchen", "LivingRoom", "Foyer")]
+script = ExtResource("12_ycdy4")
+Scrollbar = NodePath("../..")
+SingleBedroom = NodePath("House/SingleBedroom")
+Bathroom = NodePath("House/Bathroom")
+Kitchen = NodePath("House/Kitchen")
+LivingRoom = NodePath("House/LivingRoom")
+Foyer = NodePath("House/Foyer")
+
+[node name="HouseButtons" type="Node2D" parent="ScrollContainer/Control/Areas" unique_id=201120576]
+visible = false
+position = Vector2(8.025009, 52.17592)
+
+[node name="Bathroom" type="Button" parent="ScrollContainer/Control/Areas/HouseButtons" unique_id=326163674]
+offset_top = 242.08333
+offset_right = 1227.0
+offset_bottom = 592.0833
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 250
+text = "Bathroom"
+
+[node name="Kitchen" type="Button" parent="ScrollContainer/Control/Areas/HouseButtons" unique_id=855005921]
+offset_left = 75.90311
+offset_top = 242.08333
+offset_right = 997.9031
+offset_bottom = 592.0834
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 250
+text = "Kitchen"
+
+[node name="Living Room" type="Button" parent="ScrollContainer/Control/Areas/HouseButtons" unique_id=1694138085]
+offset_left = 135.0875
+offset_top = 242.08331
+offset_right = 1617.0875
+offset_bottom = 592.0833
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 250
+text = "Living Room"
+
+[node name="Foyer" type="Button" parent="ScrollContainer/Control/Areas/HouseButtons" unique_id=1926606798]
+offset_left = 227.70937
+offset_top = 242.08333
+offset_right = 907.70935
+offset_bottom = 592.0834
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 250
+text = "Foyer"
+
+[node name="SingleBedroom" type="Button" parent="ScrollContainer/Control/Areas/HouseButtons" unique_id=1109603007]
+offset_left = 282.54684
+offset_top = 242.08331
+offset_right = 1406.5469
+offset_bottom = 592.0833
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 250
+text = "Bedroom"
+
+[node name="House" type="Node2D" parent="ScrollContainer/Control/Areas" unique_id=552274068]
+
+[node name="SingleBedroom" type="Label" parent="ScrollContainer/Control/Areas/House" unique_id=2046731425]
+visible = false
 offset_left = 8.025009
 offset_top = 52.17592
 offset_right = 373.02502
 offset_bottom = 647.1759
-theme_override_fonts/font = ExtResource("8_5vw27")
-
-[node name="BedroomDescr" type="Label" parent="ScrollContainer/Control/SingleBedroom" unique_id=950409544]
-layout_mode = 0
-offset_left = 19.728134
-offset_top = 52.175926
-offset_right = 394.72815
-offset_bottom = 153.93518
 theme_override_fonts/font = ExtResource("8_5vw27")
 text = "You're in your  single bedroom. 
 Morning daylight streams through 
 your window folds.
 "
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/SingleBedroom" unique_id=1533013168]
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/SingleBedroom" unique_id=1533013168]
 layout_mode = 0
 offset_left = 97.97186
 offset_top = 124.12036
@@ -500,7 +590,7 @@ offset_bottom = 691.12036
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("12_dg77c")
 
-[node name="Computer" type="Button" parent="ScrollContainer/Control/SingleBedroom" unique_id=72921838]
+[node name="Computer" type="Button" parent="ScrollContainer/Control/Areas/House/SingleBedroom" unique_id=72921838]
 layout_mode = 0
 offset_left = 65.203125
 offset_top = 301.8316
@@ -511,7 +601,7 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 500
 text = "Check your computer"
 
-[node name="Notepad" type="Button" parent="ScrollContainer/Control/SingleBedroom" unique_id=783830256]
+[node name="Notepad" type="Button" parent="ScrollContainer/Control/Areas/House/SingleBedroom" unique_id=783830256]
 layout_mode = 0
 offset_left = 97.97186
 offset_top = 356.48145
@@ -522,7 +612,7 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 500
 text = "Check your notes"
 
-[node name="Wardrobe" type="Button" parent="ScrollContainer/Control/SingleBedroom" unique_id=1327099537]
+[node name="Wardrobe" type="Button" parent="ScrollContainer/Control/Areas/House/SingleBedroom" unique_id=1327099537]
 layout_mode = 0
 offset_left = 65.203125
 offset_top = 453.70367
@@ -533,7 +623,7 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 500
 text = "Open your wardrobe"
 
-[node name="Mirror" type="Button" parent="ScrollContainer/Control/SingleBedroom" unique_id=554877104]
+[node name="Mirror" type="Button" parent="ScrollContainer/Control/Areas/House/SingleBedroom" unique_id=554877104]
 layout_mode = 0
 offset_left = 50.15624
 offset_top = 553.1944
@@ -545,7 +635,7 @@ theme_override_font_sizes/font_size = 500
 text = "Check your 
 looks in the mirror"
 
-[node name="Trophycase" type="Button" parent="ScrollContainer/Control/SingleBedroom" unique_id=816606358]
+[node name="Trophycase" type="Button" parent="ScrollContainer/Control/Areas/House/SingleBedroom" unique_id=816606358]
 layout_mode = 0
 offset_left = 65.203125
 offset_top = 645.23145
@@ -556,7 +646,7 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 500
 text = "Look at your trophies"
 
-[node name="Dozing" type="Button" parent="ScrollContainer/Control/SingleBedroom" unique_id=41108577]
+[node name="Dozing" type="Button" parent="ScrollContainer/Control/Areas/House/SingleBedroom" unique_id=41108577]
 layout_mode = 0
 offset_left = 65.203125
 offset_top = 747.963
@@ -567,53 +657,604 @@ theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
 theme_override_font_sizes/font_size = 500
 text = "Sleep for a bit"
 
-[node name="RoomsHome" type="Node2D" parent="ScrollContainer/Control/SingleBedroom" unique_id=201120576]
+[node name="BedroomActions" type="Node2D" parent="ScrollContainer/Control/Areas/House/SingleBedroom" unique_id=1704361819]
+position = Vector2(-8.025009, -53.14814)
 
-[node name="Bathroom" type="Button" parent="ScrollContainer/Control/SingleBedroom/RoomsHome" unique_id=326163674]
-offset_top = 242.08333
-offset_right = 1471.0
-offset_bottom = 932.0833
-scale = Vector2(0.05, 0.05)
-theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
-theme_override_font_sizes/font_size = 300
-text = "Bathroom"
+[node name="Computer" type="Label" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions" unique_id=968986197]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+script = ExtResource("14_074og")
 
-[node name="Kitchen" type="Button" parent="ScrollContainer/Control/SingleBedroom/RoomsHome" unique_id=855005921]
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions/Computer" unique_id=2081200376]
+layout_mode = 0
 offset_left = 94.29374
-offset_top = 242.08331
-offset_right = 1199.2937
-offset_bottom = 932.0833
-scale = Vector2(0.05, 0.05)
-theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
-theme_override_font_sizes/font_size = 300
-text = "Kitchen"
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
 
-[node name="Living Room" type="Button" parent="ScrollContainer/Control/SingleBedroom/RoomsHome" unique_id=1694138085]
-offset_left = 171.53435
-offset_top = 242.08331
-offset_right = 1948.5343
-offset_bottom = 932.0833
-scale = Vector2(0.05, 0.05)
-theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
-theme_override_font_sizes/font_size = 300
-text = "Living Room"
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions/Computer" unique_id=1659487763]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
 
-[node name="Foyer" type="Button" parent="ScrollContainer/Control/SingleBedroom/RoomsHome" unique_id=1926606798]
-offset_left = 275.1906
-offset_top = 242.08331
-offset_right = 1746.1907
-offset_bottom = 932.0833
+[node name="Notepad" type="Label" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions" unique_id=200206388]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions/Notepad" unique_id=513929421]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions/Notepad" unique_id=1208664325]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="Wardrobe" type="Label" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions" unique_id=1435603163]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions/Wardrobe" unique_id=244258925]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions/Wardrobe" unique_id=1652809133]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="Mirror" type="Label" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions" unique_id=641629481]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions/Mirror" unique_id=1128404804]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions/Mirror" unique_id=1149417774]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="Trophycase" type="Label" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions" unique_id=2091915962]
+visible = false
+offset_left = 19.728134
+offset_top = 52.17592
+offset_right = 561.72815
+offset_bottom = 785.1759
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions/Trophycase" unique_id=672966196]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/SingleBedroom/BedroomActions/Trophycase" unique_id=616465040]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="Bathroom" type="Label" parent="ScrollContainer/Control/Areas/House" unique_id=1000462653]
+visible = false
+offset_left = 8.025009
+offset_top = 52.17592
+offset_right = 373.02502
+offset_bottom = 647.1759
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "You're in your  single bedroom. 
+Morning daylight streams through 
+your window folds.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/Bathroom" unique_id=1775861388]
+layout_mode = 0
+offset_left = 97.97186
+offset_top = 124.12036
+offset_right = 947.97186
+offset_bottom = 691.12036
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("14_w48qg")
+
+[node name="Shower" type="Button" parent="ScrollContainer/Control/Areas/House/Bathroom" unique_id=1761056970]
+layout_mode = 0
+offset_left = 65.203125
+offset_top = 301.8316
+offset_right = 5257.203
+offset_bottom = 991.8316
 scale = Vector2(0.05, 0.05)
 theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
-theme_override_font_sizes/font_size = 300
-text = "Foyer"
+theme_override_font_sizes/font_size = 500
+text = "Take a shower"
+
+[node name="Makeup" type="Button" parent="ScrollContainer/Control/Areas/House/Bathroom" unique_id=1242387419]
+layout_mode = 0
+offset_left = 97.97186
+offset_top = 356.48145
+offset_right = 4280.9717
+offset_bottom = 1865.4817
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 500
+text = "Put on Makeup
+"
+
+[node name="MedCabinet" type="Button" parent="ScrollContainer/Control/Areas/House/Bathroom" unique_id=2113990580]
+layout_mode = 0
+offset_left = 65.203125
+offset_top = 453.70367
+offset_right = 5095.203
+offset_bottom = 1962.7039
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 500
+text = "Open the medicine cabinet"
+
+[node name="BathroomActions" type="Node2D" parent="ScrollContainer/Control/Areas/House/Bathroom" unique_id=1854863788]
+position = Vector2(-8.025009, -53.14814)
+
+[node name="Shower" type="Label" parent="ScrollContainer/Control/Areas/House/Bathroom/BathroomActions" unique_id=1829734173]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/Bathroom/BathroomActions/Shower" unique_id=224516338]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/Bathroom/BathroomActions/Shower" unique_id=890246574]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="Makeup" type="Label" parent="ScrollContainer/Control/Areas/House/Bathroom/BathroomActions" unique_id=1795744745]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/Bathroom/BathroomActions/Makeup" unique_id=701932494]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/Bathroom/BathroomActions/Makeup" unique_id=1637929068]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="MedCabinet" type="Label" parent="ScrollContainer/Control/Areas/House/Bathroom/BathroomActions" unique_id=1898121683]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/Bathroom/BathroomActions/MedCabinet" unique_id=1756834251]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/Bathroom/BathroomActions/MedCabinet" unique_id=1360678601]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="Kitchen" type="Label" parent="ScrollContainer/Control/Areas/House" unique_id=140666101]
+visible = false
+offset_left = 8.025009
+offset_top = 52.17592
+offset_right = 373.02502
+offset_bottom = 647.1759
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "You're in your  single bedroom. 
+Morning daylight streams through 
+your window folds.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/Kitchen" unique_id=637626704]
+layout_mode = 0
+offset_left = 105.996864
+offset_top = 124.1204
+offset_right = 1085.9968
+offset_bottom = 817.1204
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("15_vivmo")
+
+[node name="Dishes" type="Button" parent="ScrollContainer/Control/Areas/House/Kitchen" unique_id=1435400347]
+layout_mode = 0
+offset_left = 65.203125
+offset_top = 301.8316
+offset_right = 5257.203
+offset_bottom = 991.8316
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 500
+text = "Wash some dishes"
+
+[node name="Eat" type="Button" parent="ScrollContainer/Control/Areas/House/Kitchen" unique_id=481054812]
+layout_mode = 0
+offset_left = 97.97186
+offset_top = 356.48145
+offset_right = 4280.9717
+offset_bottom = 1865.4817
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 500
+text = "Eat some fruits"
+
+[node name="KitchenActions" type="Node2D" parent="ScrollContainer/Control/Areas/House/Kitchen" unique_id=368802724]
+position = Vector2(-8.025009, -53.14814)
+
+[node name="Dishes" type="Label" parent="ScrollContainer/Control/Areas/House/Kitchen/KitchenActions" unique_id=1027712141]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/Kitchen/KitchenActions/Dishes" unique_id=374302915]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/Kitchen/KitchenActions/Dishes" unique_id=1765558836]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="Eat" type="Label" parent="ScrollContainer/Control/Areas/House/Kitchen/KitchenActions" unique_id=136550731]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/Kitchen/KitchenActions/Eat" unique_id=1887592454]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/Kitchen/KitchenActions/Eat" unique_id=249080360]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="LivingRoom" type="Label" parent="ScrollContainer/Control/Areas/House" unique_id=856090720]
+visible = false
+offset_left = 8.025009
+offset_top = 52.17592
+offset_right = 373.02502
+offset_bottom = 647.1759
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "You're in your  single bedroom. 
+Morning daylight streams through 
+your window folds.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/LivingRoom" unique_id=1031420332]
+layout_mode = 0
+offset_left = 97.97186
+offset_top = 133.19447
+offset_right = 4297.9717
+offset_bottom = 2496.1946
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("16_2cqfq")
+
+[node name="TV" type="Button" parent="ScrollContainer/Control/Areas/House/LivingRoom" unique_id=713159089]
+layout_mode = 0
+offset_left = 65.203125
+offset_top = 301.8316
+offset_right = 5257.203
+offset_bottom = 991.8316
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 500
+text = "Watch some TV"
+
+[node name="CleanUp" type="Button" parent="ScrollContainer/Control/Areas/House/LivingRoom" unique_id=1452310045]
+layout_mode = 0
+offset_left = 97.97186
+offset_top = 356.48145
+offset_right = 4280.9717
+offset_bottom = 1865.4817
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 500
+text = "Clean the room up"
+
+[node name="WaterPlant" type="Button" parent="ScrollContainer/Control/Areas/House/LivingRoom" unique_id=870821553]
+layout_mode = 0
+offset_left = 65.203125
+offset_top = 453.70367
+offset_right = 5095.203
+offset_bottom = 1962.7039
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 500
+text = "Water Barry the cactus"
+
+[node name="LivingRoomActions" type="Node2D" parent="ScrollContainer/Control/Areas/House/LivingRoom" unique_id=869294516]
+position = Vector2(-8.025009, -53.14814)
+
+[node name="TV" type="Label" parent="ScrollContainer/Control/Areas/House/LivingRoom/LivingRoomActions" unique_id=1290995569]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/LivingRoom/LivingRoomActions/TV" unique_id=2081911001]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/LivingRoom/LivingRoomActions/TV" unique_id=1002502599]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="CleanUp" type="Label" parent="ScrollContainer/Control/Areas/House/LivingRoom/LivingRoomActions" unique_id=838883766]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/LivingRoom/LivingRoomActions/CleanUp" unique_id=1814080714]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/LivingRoom/LivingRoomActions/CleanUp" unique_id=984104249]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="WaterPlant" type="Label" parent="ScrollContainer/Control/Areas/House/LivingRoom/LivingRoomActions" unique_id=202940318]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/LivingRoom/LivingRoomActions/WaterPlant" unique_id=1955554531]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/LivingRoom/LivingRoomActions/WaterPlant" unique_id=679217982]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
+
+[node name="Foyer" type="Label" parent="ScrollContainer/Control/Areas/House" unique_id=1674777815]
+visible = false
+offset_left = 8.025009
+offset_top = 52.17592
+offset_right = 373.02502
+offset_bottom = 647.1759
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "You're in your  single bedroom. 
+Morning daylight streams through 
+your window folds.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/Foyer" unique_id=628619044]
+layout_mode = 0
+offset_left = 97.97186
+offset_top = 124.12036
+offset_right = 947.97186
+offset_bottom = 691.12036
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("17_yaehf")
+
+[node name="HeadOutside" type="Button" parent="ScrollContainer/Control/Areas/House/Foyer" unique_id=2030553608]
+layout_mode = 0
+offset_left = 65.203125
+offset_top = 301.8316
+offset_right = 5257.203
+offset_bottom = 991.8316
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 0.8745098, 1)
+theme_override_font_sizes/font_size = 500
+text = "Head outside"
+
+[node name="FoyerActions" type="Node2D" parent="ScrollContainer/Control/Areas/House/Foyer" unique_id=238911164]
+position = Vector2(-8.025009, -53.14814)
+
+[node name="HeadOutside" type="Label" parent="ScrollContainer/Control/Areas/House/Foyer/FoyerActions" unique_id=1572988870]
+visible = false
+offset_left = 19.728134
+offset_top = 53.14814
+offset_right = 561.72815
+offset_bottom = 786.14813
+theme_override_fonts/font = ExtResource("8_5vw27")
+text = "Looking into the mirror you see your innermost self.
+"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Control/Areas/House/Foyer/FoyerActions/HeadOutside" unique_id=1965773694]
+layout_mode = 0
+offset_left = 94.29374
+offset_top = 41.481476
+offset_right = 944.29376
+offset_bottom = 608.48145
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_dg77c")
+
+[node name="StartGame" type="Button" parent="ScrollContainer/Control/Areas/House/Foyer/FoyerActions/HeadOutside" unique_id=338861502]
+layout_mode = 0
+offset_left = 105.99687
+offset_top = 406.3889
+offset_right = 201.99689
+offset_bottom = 437.3889
+theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
+text = "Start Game"
 
 [node name="DemoScene" type="Label" parent="ScrollContainer/Control" unique_id=699897056]
 visible = false
 layout_mode = 0
-offset_left = 19.728123
-offset_top = 52.175926
-offset_right = 394.72812
+offset_left = 19.728134
+offset_top = 52.17592
+offset_right = 394.72815
 offset_bottom = 785.1759
 theme_override_fonts/font = ExtResource("8_5vw27")
 text = "You’re walking down the dimly lit 
@@ -649,16 +1290,17 @@ Prepare for a fight
 Try to argue your way out
 "
 
-[connection signal="button_down" from="ScrollContainer/Control/Disclaimer/Of legal age" to="." method="_on_of_legal_age_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/Disclaimer/Not of legal age" to="." method="_on_not_of_legal_age_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/IntroOptions/GenderChoice/Afab" to="." method="_on_afab_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/IntroOptions/GenderChoice/Amab" to="." method="_on_amab_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/IntroOptions/SexOption/Sex" to="." method="_on_sex_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/IntroOptions/SexOption/NoSex" to="." method="_on_no_sex_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/IntroOptions/ToIntro" to="." method="_on_to_intro_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/SingleBedroom/Computer" to="." method="_on_computer_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/SingleBedroom/Notepad" to="." method="_on_notepad_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/SingleBedroom/Wardrobe" to="." method="_on_wardrobe_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/SingleBedroom/Mirror" to="." method="_on_mirror_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/SingleBedroom/Trophycase" to="." method="_on_trophycase_button_down"]
-[connection signal="button_down" from="ScrollContainer/Control/SingleBedroom/Dozing" to="." method="_on_dozing_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Intro/Disclaimer/Of legal age" to="." method="_on_of_legal_age_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Intro/Disclaimer/Not of legal age" to="." method="_on_not_of_legal_age_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Intro/IntroOptions/GenderChoice/Afab" to="." method="_on_afab_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Intro/IntroOptions/GenderChoice/Amab" to="." method="_on_amab_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Intro/IntroOptions/SexOption/Sex" to="." method="_on_sex_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Intro/IntroOptions/SexOption/NoSex" to="." method="_on_no_sex_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Intro/IntroOptions/ToIntro" to="." method="_on_to_intro_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Intro/Intro/StartGame" to="." method="_on_start_game_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Areas/HouseButtons/Bathroom" to="ScrollContainer/Control/Areas" method="_on_bathroom_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Areas/HouseButtons/Kitchen" to="ScrollContainer/Control/Areas" method="_on_kitchen_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Areas/HouseButtons/Living Room" to="ScrollContainer/Control/Areas" method="_on_living_room_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Areas/HouseButtons/Foyer" to="ScrollContainer/Control/Areas" method="_on_foyer_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Areas/HouseButtons/SingleBedroom" to="ScrollContainer/Control/Areas" method="_on_single_bedroom_button_down"]
+[connection signal="button_down" from="ScrollContainer/Control/Areas/House/SingleBedroom/Dozing" to="." method="_on_dozing_button_down"]

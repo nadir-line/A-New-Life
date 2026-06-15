@@ -2,6 +2,7 @@ extends TextureRect
 
 @export var FemStat: Label 
 @export var MascStat: Label
+@export var HornyStat: Label
 @export var HeteroStat: Label
 @export var HomoStat: Label
 
@@ -18,18 +19,32 @@ extends TextureRect
 @export var IntroOptions: Label
 @export var Intro: Label
 
+@export var Computer: Label
+@export var Notepad: Label
+@export var Wardrobe: Label
+@export var Mirror: Label
+@export var Trophycase: Label
+
+@export var SingleBedroom: Label
+@export var HouseButtons: Node2D
+
 @export var Film: VideoStreamPlayer
 @export var GenderChocie: Node2D
 @export var Name: LineEdit
 @export var NameConfirmation: Label
+@export var DemoScene: Label
 
 var Feminitiy = 0
 var Masculinity = 0
+var Hornieness = 0
 var Heterosexuality = 0
 var Homosexuality = 0
 var money = 0
 var monthlyExpenses = 950
 var days = 0
+
+var afab = false
+var amab = false
 
 func _ready() -> void:
 	Name.text_submitted.connect(_on_LineEdit_text)
@@ -52,12 +67,14 @@ func _on_not_of_legal_age_button_down() -> void:
 func _on_afab_button_down() -> void:
 	GenderChocie.visible = false
 	Feminitiy += 50
+	afab = true
 	FemStat.text = "Femininity: %0.0f" % [Feminitiy]
 	MascStat.text = "Masculinity: %0.0f" % [Masculinity]
 
 func _on_amab_button_down() -> void:
 	GenderChocie.visible = false
 	Masculinity += 50
+	amab = true
 	FemStat.text = "Femininity: %0.0f" % [Feminitiy]
 	MascStat.text = "Masculinity: %0.0f" % [Masculinity]
 
@@ -114,32 +131,19 @@ func time_of_day_switch(t):
 func _on_to_intro_button_down() -> void:
 	IntroOptions.visible = false
 	Intro.visible = true
-	Intro.text = "Hello my name is" + Name.text
+	#Intro.text = "Hello my name is" + Name.text
 	day_switch()
 	week_day_switch(0)
 	time_of_day_switch(0)
 	MoneyStat.text = "Money: %0.2f" % [money] + "$"
 	MonthlyExpensesStat.text = "Monthly Expenses: %0.2f" % [monthlyExpenses] + "$"
+	Scrollbar.scroll_vertical = 0
 
-
-func _on_computer_button_down() -> void:
-	pass # Replace with function body.
-
-
-func _on_notepad_button_down() -> void:
-	pass # Replace with function body.
-
-
-func _on_wardrobe_button_down() -> void:
-	pass # Replace with function body.
-
-
-func _on_mirror_button_down() -> void:
-	pass # Replace with function body.
-
-
-func _on_trophycase_button_down() -> void:
-	pass # Replace with function body.
+func _on_start_game_button_down() -> void:
+	Intro.visible = false
+	SingleBedroom.visible = true
+	HouseButtons.visible = true
+	Scrollbar.scroll_vertical = 0
 
 
 func _on_dozing_button_down() -> void:

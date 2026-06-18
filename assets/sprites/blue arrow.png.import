@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b37i3i0ojx2g4"
-path="res://.godot/imported/black-background-with-a-light-shining-on-it-free-photo.jpg-6134819cefa6139a44d953abc9ad40e7.ctex"
+uid="uid://dsyi1r4dtv41o"
+path="res://.godot/imported/blue arrow.png-a603719fc8a2c5486f586d5a7d7488bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bg/black-background-with-a-light-shining-on-it-free-photo.jpg"
-dest_files=["res://.godot/imported/black-background-with-a-light-shining-on-it-free-photo.jpg-6134819cefa6139a44d953abc9ad40e7.ctex"]
+source_file="res://assets/sprites/blue arrow.png"
+dest_files=["res://.godot/imported/blue arrow.png-a603719fc8a2c5486f586d5a7d7488bf.ctex"]
 
 [params]
 

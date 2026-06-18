@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b37i3i0ojx2g4"
-path="res://.godot/imported/black-background-with-a-light-shining-on-it-free-photo.jpg-6134819cefa6139a44d953abc9ad40e7.ctex"
+uid="uid://bceyhvfwi5gj4"
+path="res://.godot/imported/streaming studio.jpg-00b661004e7f160a21f1e53f1cbb76b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bg/black-background-with-a-light-shining-on-it-free-photo.jpg"
-dest_files=["res://.godot/imported/black-background-with-a-light-shining-on-it-free-photo.jpg-6134819cefa6139a44d953abc9ad40e7.ctex"]
+source_file="res://assets/sprites/places/house/streaming studio.jpg"
+dest_files=["res://.godot/imported/streaming studio.jpg-00b661004e7f160a21f1e53f1cbb76b4.ctex"]
 
 [params]
 

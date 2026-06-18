@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gu3hl3vtg6d7"
-path="res://.godot/imported/Foyer.png-6073fb53ad4925650a3efa89ba74a426.ctex"
+path="res://.godot/imported/foyer.png-3f282f719cf4449724c47a151996535f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Places/House/Foyer.png"
-dest_files=["res://.godot/imported/Foyer.png-6073fb53ad4925650a3efa89ba74a426.ctex"]
+source_file="res://assets/sprites/places/house/foyer.png"
+dest_files=["res://.godot/imported/foyer.png-3f282f719cf4449724c47a151996535f.ctex"]
 
 [params]
 

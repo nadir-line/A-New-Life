@@ -12,7 +12,8 @@ extends TextureRect
 @export var WeekDay: Label
 @export var TimeOfDay: Label
 
-
+@export var Inventory : PanelContainer
+@export var ExitInventory : Button
 
 @export var Scrollbar: ScrollContainer
 @export var Disclaimer: Label
@@ -30,7 +31,7 @@ extends TextureRect
 
 @export var Film: VideoStreamPlayer
 @export var GenderChocie: Node2D
-@export var Name: LineEdit
+@export var name1: LineEdit
 @export var NameConfirmation: Label
 @export var DemoScene: Label
 
@@ -46,13 +47,17 @@ var days = 0
 var afab = false
 var amab = false
 
+signal EmailName1(name)
+
 func _ready() -> void:
-	Name.text_submitted.connect(_on_LineEdit_text)
+	name1.text_submitted.connect(_on_LineEdit_text)
 	
 #var OriginName = Name.text
 	
 func _on_LineEdit_text(new_text) -> void: 
 	NameConfirmation.text = "Your name is:" + new_text
+	
+	emit_signal("EmailName1", name1.text)
 
 func _on_of_legal_age_button_down() -> void:
 	Disclaimer.visible = false
@@ -131,7 +136,7 @@ func time_of_day_switch(t):
 func _on_to_intro_button_down() -> void:
 	IntroOptions.visible = false
 	Intro.visible = true
-	#Intro.text = "Hello my name is" + Name.text
+	#Intro.text = "Hello my name is" + name1.text
 	day_switch()
 	week_day_switch(0)
 	time_of_day_switch(0)
@@ -174,3 +179,14 @@ func _on_dozing_button_down() -> void:
 
 		day_switch()
 	print(TimeOfDay.text)
+
+
+func _on_inventory_button_down() -> void:
+	Inventory.visible = true
+	ExitInventory.visible = true
+	Scrollbar.scroll_vertical = 0
+
+func _on_exit_inventory_button_down() -> void:
+	Inventory.visible = false
+	ExitInventory.visible = false
+	Scrollbar.scroll_vertical = 0

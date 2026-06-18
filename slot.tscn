@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://jnbeax52n355"]
+
+[ext_resource type="Script" uid="uid://sesp3flu0o08" path="res://Code/UI/slot.gd" id="1_c24ra"]
+[ext_resource type="Texture2D" uid="uid://dsisximf2yhn3" path="res://icon.svg" id="1_khion"]
+[ext_resource type="FontFile" uid="uid://utrnq4hcaeol" path="res://Assets/Fonts/B612Mono-Regular.ttf" id="3_hiqfk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ag6o"]
+font = ExtResource("3_hiqfk")
+font_size = 32
+
+[node name="slot0" type="TextureRect" unique_id=1685960783]
+offset_right = 128.0
+offset_bottom = 128.0
+scale = Vector2(1.055, 1.005)
+script = ExtResource("1_c24ra")
+
+[node name="icon" type="TextureRect" parent="." unique_id=414439983]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+mouse_filter = 0
+texture = ExtResource("1_khion")
+
+[node name="quantity" type="Label" parent="." unique_id=702672932]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 84.0
+offset_right = 123.0
+offset_bottom = 123.0
+text = "00"
+label_settings = SubResource("LabelSettings_8ag6o")
+horizontal_alignment = 2

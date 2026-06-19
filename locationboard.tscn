@@ -1,0 +1,437 @@
+[gd_scene format=3 uid="uid://by6ankysew0yo"]
+
+[ext_resource type="Texture2D" uid="uid://b0poexfmfgicr" path="res://assets/sprites/bg/black bg.png" id="1_epfxf"]
+[ext_resource type="Texture2D" uid="uid://cwuaq1s2c3l48" path="res://assets/sprites/arrows.png" id="2_sxuvl"]
+[ext_resource type="Texture2D" uid="uid://dsyi1r4dtv41o" path="res://assets/sprites/blue arrow.png" id="3_0vno3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_duvde"]
+
+[node name="Locationboard" type="TextureRect" unique_id=1279814158]
+offset_right = 5949.0
+offset_bottom = 3277.0
+texture = ExtResource("1_epfxf")
+
+[node name="Label" type="Label" parent="." unique_id=521464341]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 53.0
+offset_right = 886.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 100
+text = "Home: Rooms and Actions"
+
+[node name="Single Bedroom" type="Button" parent="." unique_id=2047193128]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 944.0
+offset_right = 721.0
+offset_bottom = 1293.0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Sgl Bedroom"
+
+[node name="Computer" type="Button" parent="Single Bedroom" unique_id=59794945]
+layout_mode = 0
+offset_left = 1523.0
+offset_top = -306.0
+offset_right = 2135.0
+offset_bottom = 43.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Computer
+"
+
+[node name="Stream" type="Button" parent="Single Bedroom/Computer" unique_id=1368284068]
+layout_mode = 0
+offset_left = 659.99976
+offset_top = -557.14276
+offset_right = 1271.9998
+offset_bottom = -208.14276
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Stream
+
+"
+
+[node name="VideoGames" type="Button" parent="Single Bedroom/Computer" unique_id=1321017720]
+layout_mode = 0
+offset_left = 1351.4287
+offset_top = -557.14294
+offset_right = 1963.4287
+offset_bottom = -208.14291
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "VideoGames
+
+"
+
+[node name="Emails" type="Button" parent="Single Bedroom/Computer" unique_id=1138521140]
+layout_mode = 0
+offset_left = 2175.7144
+offset_top = -130.00002
+offset_right = 2787.7144
+offset_bottom = 218.99998
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "E-Mails
+"
+
+[node name="Porn" type="Button" parent="Single Bedroom/Computer" unique_id=2027599162]
+layout_mode = 0
+offset_left = 2568.9993
+offset_top = 112.0
+offset_right = 3180.9993
+offset_bottom = 461.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Watch Porn
+
+"
+
+[node name="Hypno" type="Button" parent="Single Bedroom/Computer" unique_id=1137419310]
+layout_mode = 0
+offset_left = 2160.0
+offset_top = 355.7143
+offset_right = 2772.0
+offset_bottom = 704.7143
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Hypno
+
+"
+
+[node name="Arrows" type="TextureRect" parent="Single Bedroom/Computer" unique_id=1157160532]
+layout_mode = 0
+offset_left = 611.99976
+offset_top = 327.99997
+offset_right = 1569.9998
+offset_bottom = 9746.549
+rotation = 4.712389
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_sxuvl")
+
+[node name="Arrows2" type="TextureRect" parent="Single Bedroom/Computer" unique_id=2116394001]
+layout_mode = 0
+offset_left = 962.857
+offset_top = 64.285706
+offset_right = 12252.855
+offset_bottom = 1481.6321
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_0vno3")
+
+[node name="Arrows3" type="TextureRect" parent="Single Bedroom/Computer" unique_id=387653126]
+layout_mode = 0
+offset_left = 739.9998
+offset_top = 647.1429
+offset_right = 7477.6484
+offset_bottom = 2064.4893
+rotation = 4.712389
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_0vno3")
+
+[node name="Arrows4" type="TextureRect" parent="Single Bedroom/Computer" unique_id=697441825]
+layout_mode = 0
+offset_left = 1351.4285
+offset_top = 647.1429
+offset_right = 8089.077
+offset_bottom = 2064.4893
+rotation = 4.712389
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_0vno3")
+
+[node name="Notepad" type="Button" parent="Single Bedroom" unique_id=1735973769]
+layout_mode = 0
+offset_left = 1523.0
+offset_top = -28.00003
+offset_right = 2135.0
+offset_bottom = 320.99997
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Notepad
+"
+
+[node name="Wardrobe" type="Button" parent="Single Bedroom" unique_id=634238167]
+layout_mode = 0
+offset_left = 2041.0
+offset_top = -97.0
+offset_right = 2653.0
+offset_bottom = 252.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Wardrobe
+"
+
+[node name="Mirror" type="Button" parent="Single Bedroom" unique_id=1655877508]
+layout_mode = 0
+offset_left = 2041.0
+offset_top = 302.0
+offset_right = 2653.0
+offset_bottom = 651.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Mirror
+
+"
+
+[node name="Trophycase" type="Button" parent="Single Bedroom" unique_id=616740473]
+layout_mode = 0
+offset_left = 2569.0
+offset_top = 112.0
+offset_right = 3181.0
+offset_bottom = 461.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Trophycase
+
+"
+
+[node name="Arrows" type="TextureRect" parent="Single Bedroom" unique_id=1091853757]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 119.0
+offset_right = 1570.0
+offset_bottom = 5001.3457
+rotation = 4.712389
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_sxuvl")
+
+[node name="Arrows2" type="TextureRect" parent="Single Bedroom" unique_id=1165132128]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 328.0
+offset_right = 1570.0
+offset_bottom = 7580.3457
+rotation = 4.712389
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_sxuvl")
+
+[node name="Arrows3" type="TextureRect" parent="Single Bedroom" unique_id=2071812917]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 79.0
+offset_right = 12219.998
+offset_bottom = 1496.3464
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_0vno3")
+
+[node name="Bathroom" type="Button" parent="." unique_id=621946282]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 1471.0
+offset_right = 721.0
+offset_bottom = 1820.0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Bathroom"
+
+[node name="Shower" type="Button" parent="Bathroom" unique_id=1503085275]
+layout_mode = 0
+offset_left = 1523.0
+offset_top = -50.000004
+offset_right = 2135.0
+offset_bottom = 299.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Wardrobe
+"
+
+[node name="Makeup" type="Button" parent="Bathroom" unique_id=1211677972]
+layout_mode = 0
+offset_left = 1523.0
+offset_top = 300.0
+offset_right = 2135.0
+offset_bottom = 649.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Makeup
+Fem >= 10
+
+"
+
+[node name="MedCabinet" type="Button" parent="Bathroom" unique_id=2066475383]
+layout_mode = 0
+offset_left = 2091.0
+offset_top = 154.0
+offset_right = 2703.0
+offset_bottom = 498.28577
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Med Cabinet
+
+"
+
+[node name="Arrows" type="TextureRect" parent="Bathroom" unique_id=978587692]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 349.0
+offset_right = 1570.0
+offset_bottom = 5231.3457
+rotation = 4.712389
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_sxuvl")
+
+[node name="Arrows2" type="TextureRect" parent="Bathroom" unique_id=1602999954]
+layout_mode = 0
+offset_left = 472.99994
+offset_top = 111.0
+offset_right = 11763.0
+offset_bottom = 1528.3464
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_0vno3")
+
+[node name="Kitchen" type="Button" parent="." unique_id=464193260]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 1939.0
+offset_right = 721.0
+offset_bottom = 2288.0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Kitchen"
+
+[node name="Dishes" type="Button" parent="Kitchen" unique_id=2022249608]
+layout_mode = 0
+offset_left = 1079.0
+offset_top = -73.000015
+offset_right = 1691.0
+offset_bottom = 276.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Do Dishes
++10$"
+
+[node name="Eat" type="Button" parent="Kitchen" unique_id=1282554401]
+layout_mode = 0
+offset_left = 1079.0
+offset_top = 204.99995
+offset_right = 1691.0
+offset_bottom = 553.99994
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Eat
++20 Energy?"
+
+[node name="Arrows" type="TextureRect" parent="Kitchen" unique_id=1935084676]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 352.0
+offset_right = 1570.0
+offset_bottom = 3014.3457
+rotation = 4.712389
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_sxuvl")
+
+[node name="Living Room" type="Button" parent="." unique_id=764608314]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2403.0
+offset_right = 721.0
+offset_bottom = 2752.0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Living Room"
+
+[node name="Shower" type="Button" parent="Living Room" unique_id=1577152420]
+layout_mode = 0
+offset_left = 1523.0
+offset_top = -50.000004
+offset_right = 2135.0
+offset_bottom = 299.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Wardrobe
+"
+
+[node name="Makeup" type="Button" parent="Living Room" unique_id=995088920]
+layout_mode = 0
+offset_left = 1523.0
+offset_top = 300.0
+offset_right = 2135.0
+offset_bottom = 649.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Makeup
+Fem >= 10
+
+"
+
+[node name="MedCabinet" type="Button" parent="Living Room" unique_id=418131733]
+layout_mode = 0
+offset_left = 2091.0
+offset_top = 154.0
+offset_right = 2703.0
+offset_bottom = 498.28577
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Med Cabinet
+
+"
+
+[node name="Arrows" type="TextureRect" parent="Living Room" unique_id=1351632777]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 349.0
+offset_right = 1570.0
+offset_bottom = 5231.3457
+rotation = 4.712389
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_sxuvl")
+
+[node name="Arrows2" type="TextureRect" parent="Living Room" unique_id=1014035842]
+layout_mode = 0
+offset_left = 472.99994
+offset_top = 111.0
+offset_right = 11763.0
+offset_bottom = 1528.3464
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_0vno3")
+
+[node name="Foyer" type="Button" parent="." unique_id=1369814716]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 2842.0
+offset_right = 721.0
+offset_bottom = 3190.0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Foyer"
+
+[node name="Head Outside" type="Button" parent="Foyer" unique_id=121991513]
+layout_mode = 0
+offset_left = 931.0
+offset_top = 180.0
+offset_right = 1543.0
+offset_bottom = 524.28577
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Head outs.
+
+"
+
+[node name="Arrows" type="TextureRect" parent="Foyer" unique_id=908292445]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 179.99998
+offset_right = 4162.0
+offset_bottom = 1597.3464
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_0vno3")

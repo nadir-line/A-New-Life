@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://d0wkkid712fhq"]
+
+[ext_resource type="Texture2D" uid="uid://bo6j6qiauuwkn" path="res://assets/sprites/bg_1/black_bg.png" id="1_36rgb"]
+[ext_resource type="Texture2D" uid="uid://dt8ugmfng3n1w" path="res://assets/sprites/arrows.png" id="2_yfq1a"]
+[ext_resource type="Texture2D" uid="uid://bbmv6rg7jfb15" path="res://assets/sprites/merging_arrows.png" id="3_yfq1a"]
+[ext_resource type="Texture2D" uid="uid://dyj7y6ep4kvu0" path="res://assets/sprites/blue_arrow.png" id="3_ym4ru"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_duvde"]
+
+[node name="Storyboard" type="TextureRect" unique_id=1279814158]
+offset_left = 31.0
+offset_right = 5980.0
+offset_bottom = 2842.0
+texture = ExtResource("1_36rgb")
+
+[node name="Label" type="Label" parent="." unique_id=521464341]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 53.0
+offset_right = 886.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 100
+text = "Intro Story"
+
+[node name="Intro" type="Button" parent="." unique_id=2047193128]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 327.0
+offset_right = 728.0
+offset_bottom = 676.0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "IntroOptions"
+
+[node name="Afab" type="Button" parent="Intro" unique_id=59794945]
+layout_mode = 0
+offset_left = 1189.0
+offset_top = -97.000015
+offset_right = 1801.0
+offset_bottom = 251.99998
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Afab
+"
+
+[node name="Amab" type="Button" parent="Intro" unique_id=1735973769]
+layout_mode = 0
+offset_left = 1189.0
+offset_top = 180.99994
+offset_right = 1801.0
+offset_bottom = 529.99994
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Amab
+"
+
+[node name="Crisis" type="Button" parent="Intro" unique_id=634238167]
+layout_mode = 0
+offset_left = 2469.0
+offset_top = 64.999985
+offset_right = 3081.0
+offset_bottom = 414.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Intro/Crisis
+"
+
+[node name="Talk At School" type="Button" parent="Intro" unique_id=54106980]
+layout_mode = 0
+offset_left = 3491.9998
+offset_top = 65.00001
+offset_right = 4104.0
+offset_bottom = 414.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Schooltalk
+"
+
+[node name="Counseling Center" type="Button" parent="Intro" unique_id=1655877508]
+layout_mode = 0
+offset_left = 4429.0
+offset_top = -96.99997
+offset_right = 5312.0
+offset_bottom = 252.00003
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Counseling Center
+
+"
+
+[node name="Free Play" type="Button" parent="Intro" unique_id=616740473]
+layout_mode = 0
+offset_left = 4429.0
+offset_top = 283.0
+offset_right = 5041.0
+offset_bottom = 632.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_duvde")
+text = "Free Play
+
+"
+
+[node name="SplittingArrows" type="TextureRect" parent="Intro" unique_id=1165132128]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 269.0
+offset_right = 1570.0
+offset_bottom = 3200.494
+rotation = 4.712389
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_yfq1a")
+
+[node name="MergingArrows2" type="TextureRect" parent="Intro" unique_id=1091853757]
+layout_mode = 0
+offset_left = 1524.0
+offset_top = 302.00003
+offset_right = 3124.0
+offset_bottom = 5184.3457
+rotation = 4.712389
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_yfq1a")
+flip_v = true
+
+[node name="Arrow" type="TextureRect" parent="Intro" unique_id=2071812917]
+layout_mode = 0
+offset_left = 2469.0
+offset_top = 33.0
+offset_right = 9673.999
+offset_bottom = 1450.3464
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_ym4ru")
+
+[node name="SplittingArrows2" type="TextureRect" parent="Intro" unique_id=1638974315]
+layout_mode = 0
+offset_left = 3928.0
+offset_top = 309.0
+offset_right = 4886.0
+offset_bottom = 3240.494
+rotation = 4.712389
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_yfq1a")

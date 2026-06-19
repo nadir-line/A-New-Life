@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt8ugmfng3n1w"
-path="res://.godot/imported/arrows.png-5e3a05e62d7807d54998f4d90be56656.ctex"
+uid="uid://ch024dts56df3"
+path="res://.godot/imported/streaming_studio.jpg-5983dd88cc700c98d605cf3db089591c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/arrows.png"
-dest_files=["res://.godot/imported/arrows.png-5e3a05e62d7807d54998f4d90be56656.ctex"]
+source_file="res://Assets/sprites/places_1/house_1/streaming_studio.jpg"
+dest_files=["res://.godot/imported/streaming_studio.jpg-5983dd88cc700c98d605cf3db089591c.ctex"]
 
 [params]
 

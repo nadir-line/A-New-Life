@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt8ugmfng3n1w"
-path="res://.godot/imported/arrows.png-5e3a05e62d7807d54998f4d90be56656.ctex"
+uid="uid://bjsqp2aktmfqj"
+path="res://.godot/imported/female_symbol.png-020472f544f1d46911b3d4d4508cc3f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/arrows.png"
-dest_files=["res://.godot/imported/arrows.png-5e3a05e62d7807d54998f4d90be56656.ctex"]
+source_file="res://Assets/sprites/ui_1/female_symbol.png"
+dest_files=["res://.godot/imported/female_symbol.png-020472f544f1d46911b3d4d4508cc3f1.ctex"]
 
 [params]
 

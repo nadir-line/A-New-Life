@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt8ugmfng3n1w"
-path="res://.godot/imported/arrows.png-5e3a05e62d7807d54998f4d90be56656.ctex"
+uid="uid://d2ycvmrmovoq0"
+path="res://.godot/imported/bathroom_1.jpg-3bfc25f3a63c56bf76f1cce6b656fb59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/arrows.png"
-dest_files=["res://.godot/imported/arrows.png-5e3a05e62d7807d54998f4d90be56656.ctex"]
+source_file="res://Assets/sprites/places_1/house_1/bathroom_1.jpg"
+dest_files=["res://.godot/imported/bathroom_1.jpg-3bfc25f3a63c56bf76f1cce6b656fb59.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt8ugmfng3n1w"
-path="res://.godot/imported/arrows.png-5e3a05e62d7807d54998f4d90be56656.ctex"
+uid="uid://na5qrgwnqtmo"
+path="res://.godot/imported/male_symbol.png-827d29b381d6b67eea825b433e951b0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/arrows.png"
-dest_files=["res://.godot/imported/arrows.png-5e3a05e62d7807d54998f4d90be56656.ctex"]
+source_file="res://Assets/sprites/ui_1/male_symbol.png"
+dest_files=["res://.godot/imported/male_symbol.png-827d29b381d6b67eea825b433e951b0c.ctex"]
 
 [params]
 

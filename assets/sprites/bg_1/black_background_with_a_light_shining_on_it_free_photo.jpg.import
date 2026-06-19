@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cafyerne0h1rw"
-path="res://.godot/imported/black_background_with_a_light_shining_on_it_free_photo.jpg-2f18e6876208a02b124cb8b356067194.ctex"
+path="res://.godot/imported/black_background_with_a_light_shining_on_it_free_photo.jpg-910fd4d4d4170e0d8aa26ba2c2685ca2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/bg_1/black_background_with_a_light_shining_on_it_free_photo.jpg"
-dest_files=["res://.godot/imported/black_background_with_a_light_shining_on_it_free_photo.jpg-2f18e6876208a02b124cb8b356067194.ctex"]
+source_file="res://assets/sprites/bg_1/black_background_with_a_light_shining_on_it_free_photo.jpg"
+dest_files=["res://.godot/imported/black_background_with_a_light_shining_on_it_free_photo.jpg-910fd4d4d4170e0d8aa26ba2c2685ca2.ctex"]
 
 [params]
 

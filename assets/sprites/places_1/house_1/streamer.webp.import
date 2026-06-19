@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4gjdji84ufen"
-path="res://.godot/imported/streamer.webp-9fa38e27531090f13079a34fc6142d7b.ctex"
+path="res://.godot/imported/streamer.webp-d1773a771fbe5141771947461387d618.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/places_1/house_1/streamer.webp"
-dest_files=["res://.godot/imported/streamer.webp-9fa38e27531090f13079a34fc6142d7b.ctex"]
+source_file="res://assets/sprites/places_1/house_1/streamer.webp"
+dest_files=["res://.godot/imported/streamer.webp-d1773a771fbe5141771947461387d618.ctex"]
 
 [params]
 

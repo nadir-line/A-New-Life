@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bo6j6qiauuwkn" path="res://assets/sprites/bg_1/black_bg.png" id="1_36rgb"]
 [ext_resource type="Texture2D" uid="uid://dt8ugmfng3n1w" path="res://assets/sprites/arrows.png" id="2_yfq1a"]
 [ext_resource type="Texture2D" uid="uid://bbmv6rg7jfb15" path="res://assets/sprites/merging_arrows.png" id="3_yfq1a"]
-[ext_resource type="Texture2D" uid="uid://dyj7y6ep4kvu0" path="res://Assets/Sprites/blue_arrow.png" id="3_ym4ru"]
+[ext_resource type="Texture2D" uid="uid://dyj7y6ep4kvu0" path="res://assets/sprites/blue_arrow.png" id="3_ym4ru"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_duvde"]
 

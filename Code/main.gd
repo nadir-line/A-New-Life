@@ -1,47 +1,41 @@
 extends TextureRect
 
-@export var FemStat: Label 
-@export var MascStat: Label
-@export var HornyStat: Label
-@export var HeteroStat: Label
-@export var HomoStat: Label
+@export var hetero_stat: Label
+@export var homo_stat: Label
+@export var horny_stat: Label
+@export var fem_stat: Label 
+@export var masc_stat: Label
 
-@export var MoneyStat: Label
-@export var MonthlyExpensesStat: Label
-@export var Day: Label
-@export var WeekDay: Label
-@export var TimeOfDay: Label
+@export var money_stat: Label
+@export var monthly_expenses_stat: Label
+@export var day: Label
+@export var week_day: Label
+@export var time_of_day: Label
 
-@export var Inventory : PanelContainer
-@export var ExitInventory : Button
+@export var inventory : PanelContainer
+@export var exit_inventory : Button
 
-@export var Scrollbar: ScrollContainer
-@export var Disclaimer: Label
-@export var IntroOptions: Label
-@export var Intro: Label
+@export var scrollbar: ScrollContainer
+@export var disclaimer: Label
+@export var intro_options: Label
+@export var intro: Label
 
-@export var Computer: Label
-@export var Notepad: Label
-@export var Wardrobe: Label
-@export var Mirror: Label
-@export var Trophycase: Label
+@export var single_bedroom: Label
+@export var house_buttons: Label
 
-@export var SingleBedroom: Label
-@export var HouseButtons: Node2D
-
-@export var Film: VideoStreamPlayer
-@export var GenderChocie: Node2D
+@export var rick_roll: VideoStreamPlayer
+@export var gender_choice: Node2D
 @export var name1: LineEdit
-@export var NameConfirmation: Label
-@export var DemoScene: Label
+@export var name_confirmation: Label
+@export var demo_scene: Label
 
-var Feminitiy = 0
-var Masculinity = 0
-var Hornieness = 0
-var Heterosexuality = 0
-var Homosexuality = 0
+var feminitiy = 0
+var masculinity = 0
+var hornieness = 0
+var heterosexuality = 0
+var homosexuality = 0
 var money = 0
-var monthlyExpenses = 950
+var monthly_expenses = 950
 var days = 0
 
 var afab = false
@@ -55,138 +49,138 @@ func _ready() -> void:
 #var OriginName = Name.text
 	
 func _on_LineEdit_text(new_text) -> void: 
-	NameConfirmation.text = "Your name is:" + new_text
+	name_confirmation.text = "Your name is:" + new_text
 	
 	emit_signal("EmailName1", name1.text)
 
 func _on_of_legal_age_button_down() -> void:
-	Disclaimer.visible = false
-	Scrollbar.scroll_vertical = 0
-	IntroOptions.visible = true
+	disclaimer.visible = false
+	scrollbar.scroll_vertical = 0
+	intro_options.visible = true
 
 func _on_not_of_legal_age_button_down() -> void:
-	Film.visible = true
-	Film.play()
+	rick_roll.visible = true
+	rick_roll.play()
 
 
 func _on_afab_button_down() -> void:
-	GenderChocie.visible = false
-	Feminitiy += 50
+	gender_choice.visible = false
+	feminitiy += 50
 	afab = true
-	FemStat.text = "Femininity: %0.0f" % [Feminitiy]
-	MascStat.text = "Masculinity: %0.0f" % [Masculinity]
+	fem_stat.text = "Femininity: %0.0f" % [feminitiy]
+	masc_stat.text = "Masculinity: %0.0f" % [masculinity]
 
 func _on_amab_button_down() -> void:
-	GenderChocie.visible = false
-	Masculinity += 50
+	gender_choice.visible = false
+	masculinity += 50
 	amab = true
-	FemStat.text = "Femininity: %0.0f" % [Feminitiy]
-	MascStat.text = "Masculinity: %0.0f" % [Masculinity]
+	fem_stat.text = "Femininity: %0.0f" % [feminitiy]
+	masc_stat.text = "Masculinity: %0.0f" % [masculinity]
 
 
 func _on_sex_button_down() -> void:
-	Heterosexuality = 0
-	Homosexuality = 0
-	HeteroStat.text = "Heterosexuality: %0.0f" % [Heterosexuality]
-	HomoStat.text = "Homosexuality: %0.0f" % [Homosexuality]
+	heterosexuality = 0
+	homosexuality = 0
+	hetero_stat.text = "Heterosexuality: %0.0f" % [heterosexuality]
+	homo_stat.text = "Homosexuality: %0.0f" % [homosexuality]
 
 func _on_no_sex_button_down() -> void:
-	Heterosexuality = -100
-	Homosexuality = -100
-	HeteroStat.text = "Heterosexuality: %0.0f" % [Heterosexuality]
-	HomoStat.text = "Homosexuality: %0.0f" % [Homosexuality]
+	heterosexuality = -100
+	homosexuality = -100
+	hetero_stat.text = "Heterosexuality: %0.0f" % [heterosexuality]
+	homo_stat.text = "Homosexuality: %0.0f" % [homosexuality]
 	
 func day_switch():
 	days += 1
-	Day.text = "Day %0.0f" % [days]
+	day.text = "Day %0.0f" % [days]
 
 func week_day_switch(w):
 	w += 1
 	match w:
 		1:
-			WeekDay.text = "It's Monday"
+			week_day.text = "It's Monday"
 		2:
-			WeekDay.text = "It's Tuesday"
+			week_day.text = "It's Tuesday"
 		3:
-			WeekDay.text = "It's Wednesday"
+			week_day.text = "It's Wednesday"
 		4:
-			WeekDay.text = "It's Thursday"
+			week_day.text = "It's Thursday"
 		5:
-			WeekDay.text = "It's Friday"
+			week_day.text = "It's Friday"
 		6:
-			WeekDay.text = "It's Saturday"
+			week_day.text = "It's Saturday"
 		7:
-			WeekDay.text = "It's Sunday"
+			week_day.text = "It's Sunday"
 
 func time_of_day_switch(t):
 	t += 1
 	match t:
 		1:
-			TimeOfDay.text = "It's Morning"
+			time_of_day.text = "It's Morning"
 		2:
-			TimeOfDay.text = "It's Lunchtime"
+			time_of_day.text = "It's Lunchtime"
 		3:
-			TimeOfDay.text = "It's Afternoon"
+			time_of_day.text = "It's Afternoon"
 		4:
-			TimeOfDay.text = "It's Dusk"
+			time_of_day.text = "It's Dusk"
 		5:
-			TimeOfDay.text = "It's Nighttime"
+			time_of_day.text = "It's Nighttime"
 
 	
 func _on_to_intro_button_down() -> void:
-	IntroOptions.visible = false
-	Intro.visible = true
+	intro_options.visible = false
+	intro.visible = true
 	#Intro.text = "Hello my name is" + name1.text
 	day_switch()
 	week_day_switch(0)
 	time_of_day_switch(0)
-	MoneyStat.text = "Money: %0.2f" % [money] + "$"
-	MonthlyExpensesStat.text = "Monthly Expenses: %0.2f" % [monthlyExpenses] + "$"
-	Scrollbar.scroll_vertical = 0
+	money_stat.text = "Money: %0.2f" % [money] + "$"
+	monthly_expenses_stat.text = "Monthly Expenses: %0.2f" % [monthly_expenses] + "$"
+	scrollbar.scroll_vertical = 0
 
 func _on_start_game_button_down() -> void:
-	Intro.visible = false
-	SingleBedroom.visible = true
-	HouseButtons.visible = true
-	Scrollbar.scroll_vertical = 0
+	intro.visible = false
+	single_bedroom.visible = true
+	house_buttons.visible = true
+	scrollbar.scroll_vertical = 0
 
 
 func _on_dozing_button_down() -> void:
-	if(TimeOfDay.text == "It's Morning"):
+	if(time_of_day.text == "It's Morning"):
 		time_of_day_switch(1)
-	elif (TimeOfDay.text == "It's Lunchtime"):
+	elif (time_of_day.text == "It's Lunchtime"):
 		time_of_day_switch(2)
-	elif(TimeOfDay.text == "It's Afternoon"):
+	elif(time_of_day.text == "It's Afternoon"):
 		time_of_day_switch(3)
-	elif(TimeOfDay.text == "It's Dusk"):
+	elif(time_of_day.text == "It's Dusk"):
 		time_of_day_switch(4)
-	elif(TimeOfDay.text == TimeOfDay.text):
+	elif(time_of_day.text == "It's Nighttime"):
 		time_of_day_switch(0)
-		if(WeekDay.text == "It's Monday"):
+		if(week_day.text == "It's Monday"):
 			week_day_switch(1)
-		elif(WeekDay.text == "It's Tuesday"):
+		elif(week_day.text == "It's Tuesday"):
 			week_day_switch(2)	
-		elif(WeekDay.text == "It's Wednesday"):
+		elif(week_day.text == "It's Wednesday"):
 			week_day_switch(3)	
-		elif(WeekDay.text == "It's Thursday"):
+		elif(week_day.text == "It's Thursday"):
 			week_day_switch(4)	
-		elif(WeekDay.text == "It's Friday"):
+		elif(week_day.text == "It's Friday"):
 			week_day_switch(5)	
-		elif(WeekDay.text == "It's Saturday"):
+		elif(week_day.text == "It's Saturday"):
 			week_day_switch(6)
-		elif(WeekDay.text == "It's Sunday"):
+		elif(week_day.text == "It's Sunday"):
 			week_day_switch(0)	
 
 		day_switch()
-	print(TimeOfDay.text)
+	print(time_of_day.text)
 
 
 func _on_inventory_button_down() -> void:
-	Inventory.visible = true
-	ExitInventory.visible = true
-	Scrollbar.scroll_vertical = 0
+	inventory.visible = true
+	exit_inventory.visible = true
+	scrollbar.scroll_vertical = 0
 
 func _on_exit_inventory_button_down() -> void:
-	Inventory.visible = false
-	ExitInventory.visible = false
-	Scrollbar.scroll_vertical = 0
+	inventory.visible = false
+	exit_inventory.visible = false
+	scrollbar.scroll_vertical = 0

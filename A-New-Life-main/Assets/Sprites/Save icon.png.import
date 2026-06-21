@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1q6qcg5kag1e"
-path="res://.godot/imported/ui bar.png-b2bb75d7fbd5855a479d371fedbf4fff.ctex"
+uid="uid://xseiffobu4co"
+path="res://.godot/imported/Save icon.png-911b3531c9a0889de5bd3dbe31e97e25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/UI/ui bar.png"
-dest_files=["res://.godot/imported/ui bar.png-b2bb75d7fbd5855a479d371fedbf4fff.ctex"]
+source_file="res://Assets/Sprites/Save icon.png"
+dest_files=["res://.godot/imported/Save icon.png-911b3531c9a0889de5bd3dbe31e97e25.ctex"]
 
 [params]
 

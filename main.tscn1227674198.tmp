@@ -1,31 +1,31 @@
 [gd_scene format=3 uid="uid://d3uyj6wjhhnvm"]
 
-[ext_resource type="Texture2D" uid="uid://b0poexfmfgicr" path="res://assets/sprites/BG/Black BG.png" id="1_5vw27"]
+[ext_resource type="Texture2D" uid="uid://bo6j6qiauuwkn" path="res://assets/sprites/bg_1/black_bg.png" id="1_5vw27"]
 [ext_resource type="Script" uid="uid://b2rxmsv3db0qf" path="res://code/main.gd" id="2_h2yge"]
-[ext_resource type="Texture2D" uid="uid://fa4uv0ogh8tc" path="res://assets/sprites/ui/UIBar.png" id="6_7mycd"]
-[ext_resource type="Texture2D" uid="uid://dcmbudiwm2sb4" path="res://assets/sprites/UI/Arrow.png" id="7_kek77"]
-[ext_resource type="Texture2D" uid="uid://xseiffobu4co" path="res://assets/sprites/UI/Save icon.png" id="8_4c57u"]
-[ext_resource type="FontFile" uid="uid://utrnq4hcaeol" path="res://assets/Fonts/B612Mono-Regular.ttf" id="8_5vw27"]
-[ext_resource type="Texture2D" uid="uid://f4dwa1erb1tq" path="res://assets/sprites/UI/Restart icon.png" id="9_efxa6"]
-[ext_resource type="VideoStream" uid="uid://b2tjv7uemtd7w" path="res://assets/Videos/rick-roll-video-meme-template-video-1da252ec.ogv" id="9_kek77"]
+[ext_resource type="Texture2D" uid="uid://dl1wex2t0b77v" path="res://assets/sprites/ui_1/ui_bar.png" id="6_7mycd"]
+[ext_resource type="Texture2D" uid="uid://dt8ugmfng3n1w" path="res://assets/sprites/arrows.png" id="7_kek77"]
+[ext_resource type="Texture2D" uid="uid://df20fan6ir8c8" path="res://assets/sprites/ui_1/save_icon.png" id="8_4c57u"]
+[ext_resource type="FontFile" uid="uid://b3vssdigv3x12" path="res://assets/fonts_2/b612_mono_regular.ttf" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://5h2x1c4khagw" path="res://assets/sprites/ui_1/restart_icon.png" id="9_efxa6"]
+[ext_resource type="VideoStream" uid="uid://dmp04118i84kw" path="res://assets/videos_2/rick_roll_video_meme_template_video_1da252ec.ogv" id="9_kek77"]
 [ext_resource type="Texture2D" uid="uid://dsisximf2yhn3" path="res://icon.svg" id="10_4c57u"]
-[ext_resource type="Texture2D" uid="uid://bphqd4x7j4ssv" path="res://assets/sprites/UI/Female Symbol.png" id="10_efxa6"]
-[ext_resource type="Texture2D" uid="uid://du06osj848eqe" path="res://assets/sprites/UI/Male Symbol.png" id="11_dg77c"]
-[ext_resource type="Texture2D" uid="uid://dohbp1vtrj62f" path="res://assets/sprites/Places/House/Single Bedroom.jpg" id="12_dg77c"]
-[ext_resource type="Script" uid="uid://brktocq1davgn" path="res://code/areas/areas.gd" id="12_ycdy4"]
-[ext_resource type="Texture2D" uid="uid://crnrl4hio2qey" path="res://assets/sprites/Places/House/Bathroom.jpg" id="14_w48qg"]
-[ext_resource type="Texture2D" uid="uid://bceyhvfwi5gj4" path="res://assets/sprites/Places/House/streaming studio.jpg" id="15_0odxb"]
-[ext_resource type="Texture2D" uid="uid://dx7suc2g77jfh" path="res://assets/sprites/Places/House/pc screen.webp" id="15_82xsv"]
-[ext_resource type="Texture2D" uid="uid://cu5cahiki4re7" path="res://assets/sprites/Places/House/Mirror.webp" id="15_cegan"]
-[ext_resource type="Texture2D" uid="uid://dlku37cnn53a" path="res://assets/sprites/Places/House/streamer.webp" id="15_d13ii"]
-[ext_resource type="Texture2D" uid="uid://s0r7wb807bul" path="res://assets/sprites/Places/House/Kitchen.jpg" id="15_vivmo"]
-[ext_resource type="Texture2D" uid="uid://cj4lqn2yq7khf" path="res://assets/sprites/Places/House/emails.jpg" id="16_1u8w0"]
-[ext_resource type="Texture2D" uid="uid://y0jv1wgnhkk3" path="res://assets/sprites/Places/House/Living Room.jpg" id="16_2cqfq"]
-[ext_resource type="Texture2D" uid="uid://do5oemctsq6ip" path="res://assets/sprites/Places/House/porn stream.webp" id="17_lswn8"]
-[ext_resource type="Texture2D" uid="uid://gu3hl3vtg6d7" path="res://assets/sprites/Places/House/Foyer.png" id="17_yaehf"]
-[ext_resource type="Script" uid="uid://dhchjtj64r2hx" path="res://code/areas/house/emails.gd" id="18_a6jrf"]
+[ext_resource type="Texture2D" uid="uid://bjsqp2aktmfqj" path="res://assets/sprites/ui_1/female_symbol.png" id="10_efxa6"]
+[ext_resource type="Texture2D" uid="uid://na5qrgwnqtmo" path="res://assets/sprites/ui_1/male_symbol.png" id="11_dg77c"]
+[ext_resource type="Texture2D" uid="uid://bn0ypsb357jqt" path="res://assets/sprites/places_1/house_1/single_bedroom.jpg" id="12_dg77c"]
+[ext_resource type="Script" uid="uid://d4ieoablcuowv" path="res://code/areas_2/areas_1.gd" id="12_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://d2ycvmrmovoq0" path="res://assets/sprites/places_1/house_1/bathroom_1.jpg" id="14_w48qg"]
+[ext_resource type="Texture2D" uid="uid://ch024dts56df3" path="res://assets/sprites/places_1/house_1/streaming_studio.jpg" id="15_0odxb"]
+[ext_resource type="Texture2D" uid="uid://ci28eijw5clh8" path="res://assets/sprites/places_1/house_1/pc_screen.webp" id="15_82xsv"]
+[ext_resource type="Texture2D" uid="uid://cl06umkbjyf6k" path="res://assets/sprites/places_1/house_1/mirror_1.webp" id="15_cegan"]
+[ext_resource type="Texture2D" uid="uid://b4gjdji84ufen" path="res://assets/sprites/places_1/house_1/streamer.webp" id="15_d13ii"]
+[ext_resource type="Texture2D" uid="uid://fi6jwgruceef" path="res://assets/sprites/places_1/house_1/kitchen_1.jpg" id="15_vivmo"]
+[ext_resource type="Texture2D" uid="uid://cnmulew8igqqf" path="res://assets/sprites/places_1/house_1/emails.jpg" id="16_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://cdekpddwjvo7h" path="res://assets/sprites/places_1/house_1/living_room.jpg" id="16_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://blwn10wsr7v3k" path="res://assets/sprites/places_1/house_1/porn_stream.webp" id="17_lswn8"]
+[ext_resource type="Texture2D" uid="uid://bknodmxhmj01k" path="res://assets/sprites/places_1/house_1/foyer_1.png" id="17_yaehf"]
+[ext_resource type="Script" uid="uid://dhchjtj64r2hx" path="res://emails.gd" id="18_a6jrf"]
 [ext_resource type="PackedScene" uid="uid://jnbeax52n355" path="res://slot.tscn" id="21_getpj"]
-[ext_resource type="Script" uid="uid://5pwmeb5nqcb2" path="res://code/ui/inventory_ui.gd" id="21_ryguw"]
+[ext_resource type="Script" uid="uid://5pwmeb5nqcb2" path="res://inventory_ui.gd" id="21_ryguw"]
 [ext_resource type="Script" uid="uid://d3law1db002cd" path="res://inventory.gd" id="23_d13ii"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
@@ -38,7 +38,7 @@ bg_color = Color(0.6, 0, 0.6, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryguw"]
 
-[node name="Main" type="TextureRect" unique_id=161926023 node_paths=PackedStringArray("hetero_stat", "homo_stat", "horny_stat", "fem_stat", "masc_stat", "money_stat", "monthly_expenses_stat", "day", "week_day", "time_of_day", "inventory", "exit_inventory", "scrollbar", "disclaimer", "intro_options", "intro", "single_bedroom", "house_buttons", "rick_roll", "gender_choice", "name1", "name_confirmation", "demo_scene")]
+[node name="Main" type="TextureRect" unique_id=161926023 node_paths=PackedStringArray("FemStat", "MascStat", "HornyStat", "HeteroStat", "HomoStat", "MoneyStat", "MonthlyExpensesStat", "Day", "WeekDay", "TimeOfDay", "Inventory", "ExitInventory", "Scrollbar", "Disclaimer", "IntroOptions", "Intro", "Computer", "Notepad", "Wardrobe", "Mirror", "Trophycase", "SingleBedroom", "HouseButtons", "Film", "GenderChocie", "name1", "NameConfirmation", "DemoScene")]
 offset_right = 641.33124
 offset_bottom = 349.99997
 scale = Vector2(2.9906542, 3.0857143)
@@ -46,29 +46,34 @@ texture = ExtResource("1_5vw27")
 expand_mode = 1
 stretch_mode = 1
 script = ExtResource("2_h2yge")
-hetero_stat = NodePath("LeftUIBar/GridContainer/HFlowContainer/Heterostat")
-homo_stat = NodePath("LeftUIBar/GridContainer/HFlowContainer/Homostat")
-horny_stat = NodePath("LeftUIBar/GridContainer/HFlowContainer/HornyStat")
-fem_stat = NodePath("LeftUIBar/GridContainer/HFlowContainer/FemStat")
-masc_stat = NodePath("LeftUIBar/GridContainer/HFlowContainer/MascStat")
-money_stat = NodePath("RightUIBar/VFlowContainer/Money")
-monthly_expenses_stat = NodePath("RightUIBar/VFlowContainer/MonthExpens")
-day = NodePath("RightUIBar/VFlowContainer/Day")
-week_day = NodePath("RightUIBar/VFlowContainer/WeekDay")
-time_of_day = NodePath("RightUIBar/VFlowContainer/TimeOfDay")
-inventory = NodePath("Game/Control/InventoryUI")
-exit_inventory = NodePath("UpperUIBar/ExitInventory")
-scrollbar = NodePath("Game")
-disclaimer = NodePath("Game/Control/Intro/Disclaimer")
-intro_options = NodePath("Game/Control/Intro/IntroOptions")
-intro = NodePath("Game/Control/Intro/Intro")
-single_bedroom = NodePath("Game/Control/Areas/House/SingleBedroomButtons")
-house_buttons = NodePath("Game/Control/Areas/HouseButtons")
-rick_roll = NodePath("Game/Control/Intro/Disclaimer/VideoStreamPlayer")
-gender_choice = NodePath("Game/Control/Intro/IntroOptions/GenderChoice")
+FemStat = NodePath("LeftUIBar/GridContainer/HFlowContainer/FemStat")
+MascStat = NodePath("LeftUIBar/GridContainer/HFlowContainer/MascStat")
+HornyStat = NodePath("LeftUIBar/GridContainer/HFlowContainer/HornyStat")
+HeteroStat = NodePath("LeftUIBar/GridContainer/HFlowContainer/Heterostat")
+HomoStat = NodePath("LeftUIBar/GridContainer/HFlowContainer/Homostat")
+MoneyStat = NodePath("RightUIBar/VFlowContainer/Money")
+MonthlyExpensesStat = NodePath("RightUIBar/VFlowContainer/MonthExpens")
+Day = NodePath("RightUIBar/VFlowContainer/Day")
+WeekDay = NodePath("RightUIBar/VFlowContainer/WeekDay")
+TimeOfDay = NodePath("RightUIBar/VFlowContainer/TimeOfDay")
+Inventory = NodePath("Game/Control/InventoryUI")
+ExitInventory = NodePath("UpperUIBar/ExitInventory")
+Scrollbar = NodePath("Game")
+Disclaimer = NodePath("Game/Control/Intro/Disclaimer")
+IntroOptions = NodePath("Game/Control/Intro/IntroOptions")
+Intro = NodePath("Game/Control/Intro/Intro")
+Computer = NodePath("Game/Control/Areas/House/BedroomActions/ComputerButtons")
+Notepad = NodePath("Game/Control/Areas/House/BedroomActions/Notepad")
+Wardrobe = NodePath("Game/Control/Areas/House/BedroomActions/Wardrobe")
+Mirror = NodePath("Game/Control/Areas/House/BedroomActions/ComputerButtons")
+Trophycase = NodePath("Game/Control/Areas/House/BedroomActions/Trophycase")
+SingleBedroom = NodePath("Game/Control/Areas/House/SingleBedroomButtons")
+HouseButtons = NodePath("Game/Control/Areas/HouseButtons")
+Film = NodePath("Game/Control/Intro/Disclaimer/VideoStreamPlayer")
+GenderChocie = NodePath("Game/Control/Intro/IntroOptions/GenderChoice")
 name1 = NodePath("Game/Control/Intro/IntroOptions/LineEdit")
-name_confirmation = NodePath("Game/Control/Intro/IntroOptions/YourName")
-demo_scene = NodePath("Game/Control/DemoScene")
+NameConfirmation = NodePath("Game/Control/Intro/IntroOptions/YourName")
+DemoScene = NodePath("Game/Control/DemoScene")
 
 [node name="LeftUIBar" type="TextureRect" parent="." unique_id=1268299718]
 layout_mode = 0
@@ -383,7 +388,7 @@ layout_mode = 0
 offset_left = 133.41562
 offset_top = 73.24074
 offset_right = 508.25
-offset_bottom = 470.87958
+offset_bottom = 323.10184
 theme = SubResource("Theme_5vw27")
 
 [node name="Control" type="Control" parent="Game" unique_id=1183575468]
@@ -393,7 +398,6 @@ layout_mode = 2
 [node name="Intro" type="Node2D" parent="Game/Control" unique_id=1196246308]
 
 [node name="Disclaimer" type="Label" parent="Game/Control/Intro" unique_id=1029099582]
-visible = false
 offset_left = 9.028124
 offset_top = 76.15741
 offset_right = 374.02814
@@ -457,6 +461,7 @@ volume_db = -15.0
 expand = true
 
 [node name="IntroOptions" type="Label" parent="Game/Control/Intro" unique_id=36155927]
+visible = false
 offset_left = 12.706249
 offset_top = 75.18519
 offset_right = 377.70624
@@ -571,19 +576,14 @@ offset_bottom = 437.3889
 theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
 text = "Start Game"
 
-[node name="Areas" type="Node2D" parent="Game/Control" unique_id=1380009074 node_paths=PackedStringArray("scrollbar", "single_bedroom", "house_buttons", "computer", "mirror", "trophycase", "streaming_buttons", "gaming_stream", "camshow", "video_games_buttons", "email_buttons")]
+[node name="Areas" type="Node2D" parent="Game/Control" unique_id=1380009074 node_paths=PackedStringArray("scrollbar", "singleBedroom", "streaming", "email", "mirror", "trophycase")]
 script = ExtResource("12_ycdy4")
 scrollbar = NodePath("../..")
-single_bedroom = NodePath("House/SingleBedroomButtons")
-house_buttons = NodePath("HouseButtons")
-computer = NodePath("House/BedroomActions/ComputerButtons")
+singleBedroom = NodePath("House/SingleBedroomButtons")
+streaming = NodePath("House/BedroomActions/Streaming")
+email = NodePath("House/BedroomActions/Emails")
 mirror = NodePath("House/BedroomActions/Mirror")
 trophycase = NodePath("House/BedroomActions/Trophycase")
-streaming_buttons = NodePath("House/BedroomActions/StreamingButtons")
-gaming_stream = NodePath("House/BedroomActions/GamingStream")
-camshow = NodePath("House/BedroomActions/Camshow")
-video_games_buttons = NodePath("House/BedroomActions/VideoGamesButtons")
-email_buttons = NodePath("House/BedroomActions/Emails")
 
 [node name="HouseButtons" type="Label" parent="Game/Control/Areas" unique_id=716860546]
 visible = false
@@ -663,9 +663,9 @@ your window folds.
 [node name="TextureRect" type="TextureRect" parent="Game/Control/Areas/House/SingleBedroomButtons" unique_id=1533013168]
 layout_mode = 0
 offset_left = 97.97186
-offset_top = 86.52777
+offset_top = 124.12036
 offset_right = 947.97186
-offset_bottom = 653.5278
+offset_bottom = 691.12036
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("12_dg77c")
 
@@ -805,7 +805,7 @@ offset_bottom = 436.4167
 theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
 text = "Watch Hypno"
 
-[node name="StreamingButtons" type="Label" parent="Game/Control/Areas/House/BedroomActions" unique_id=1871299090]
+[node name="Streaming" type="Label" parent="Game/Control/Areas/House/BedroomActions" unique_id=1871299090]
 visible = false
 offset_left = 19.728128
 offset_top = 76.157394
@@ -816,7 +816,7 @@ text = "You set up your camera and begin
 to think about what you wanna 
 stream for your fans today"
 
-[node name="TextureRect" type="TextureRect" parent="Game/Control/Areas/House/BedroomActions/StreamingButtons" unique_id=2529872]
+[node name="TextureRect" type="TextureRect" parent="Game/Control/Areas/House/BedroomActions/Streaming" unique_id=2529872]
 layout_mode = 0
 offset_left = 94.29374
 offset_top = 71.62038
@@ -825,7 +825,7 @@ offset_bottom = 638.62036
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("15_0odxb")
 
-[node name="GamingStream" type="Button" parent="Game/Control/Areas/House/BedroomActions/StreamingButtons" unique_id=1935960469]
+[node name="Gaming" type="Button" parent="Game/Control/Areas/House/BedroomActions/Streaming" unique_id=1935960469]
 layout_mode = 0
 offset_left = 105.99687
 offset_top = 205.78705
@@ -834,7 +834,7 @@ offset_bottom = 236.78705
 theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
 text = "Stream yourself"
 
-[node name="Camshow" type="Button" parent="Game/Control/Areas/House/BedroomActions/StreamingButtons" unique_id=1537327481]
+[node name="Camshow" type="Button" parent="Game/Control/Areas/House/BedroomActions/Streaming" unique_id=1537327481]
 layout_mode = 0
 offset_left = 105.99686
 offset_top = 249.21295
@@ -843,7 +843,7 @@ offset_bottom = 280.21295
 theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
 text = "Start Camshow"
 
-[node name="GamingStream" type="Label" parent="Game/Control/Areas/House/BedroomActions" unique_id=1924742227]
+[node name="Gaming" type="Label" parent="Game/Control/Areas/House/BedroomActions" unique_id=1924742227]
 visible = false
 offset_left = 19.728134
 offset_top = 76.15739
@@ -854,7 +854,7 @@ text = "You boot up your favourite game
 and prepare yourself to have a
 cozy gaming stream with fans."
 
-[node name="TextureRect" type="TextureRect" parent="Game/Control/Areas/House/BedroomActions/GamingStream" unique_id=2018720600]
+[node name="TextureRect" type="TextureRect" parent="Game/Control/Areas/House/BedroomActions/Gaming" unique_id=2018720600]
 layout_mode = 0
 offset_left = 94.29374
 offset_top = 71.62038
@@ -863,7 +863,7 @@ offset_bottom = 638.62036
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("15_d13ii")
 
-[node name="StartStream" type="Button" parent="Game/Control/Areas/House/BedroomActions/GamingStream" unique_id=1458770898]
+[node name="StartStream" type="Button" parent="Game/Control/Areas/House/BedroomActions/Gaming" unique_id=1458770898]
 layout_mode = 0
 offset_left = 105.99687
 offset_top = 205.78705
@@ -872,7 +872,7 @@ offset_bottom = 236.78705
 theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
 text = "Start the Stream"
 
-[node name="GoBackToDesktop" type="Button" parent="Game/Control/Areas/House/BedroomActions/GamingStream" unique_id=1084987325]
+[node name="GoBackToDesktop" type="Button" parent="Game/Control/Areas/House/BedroomActions/Gaming" unique_id=1084987325]
 layout_mode = 0
 offset_left = 105.99686
 offset_top = 249.21295
@@ -918,44 +918,6 @@ offset_right = 201.99686
 offset_bottom = 280.21295
 theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
 text = "Back to Desktop"
-
-[node name="VideoGamesButtons" type="Label" parent="Game/Control/Areas/House/BedroomActions" unique_id=2029365989]
-visible = false
-offset_left = 19.728134
-offset_top = 76.15739
-offset_right = 352.72815
-offset_bottom = 529.8611
-theme_override_fonts/font = ExtResource("8_5vw27")
-text = "You set up your camera and begin
-to think about what you wanna 
-stream for your fans today"
-
-[node name="TextureRect" type="TextureRect" parent="Game/Control/Areas/House/BedroomActions/VideoGamesButtons" unique_id=757960928]
-layout_mode = 0
-offset_left = 94.29374
-offset_top = 71.62038
-offset_right = 944.29376
-offset_bottom = 638.62036
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("15_0odxb")
-
-[node name="GamingStream" type="Button" parent="Game/Control/Areas/House/BedroomActions/VideoGamesButtons" unique_id=1873554137]
-layout_mode = 0
-offset_left = 105.99687
-offset_top = 205.78705
-offset_right = 201.99689
-offset_bottom = 236.78705
-theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
-text = "Stream yourself"
-
-[node name="Camshow" type="Button" parent="Game/Control/Areas/House/BedroomActions/VideoGamesButtons" unique_id=1861818676]
-layout_mode = 0
-offset_left = 105.99686
-offset_top = 249.21295
-offset_right = 201.99686
-offset_bottom = 280.21295
-theme_override_colors/font_color = Color(0, 0, 1, 0.8666667)
-text = "Start Camshow"
 
 [node name="Emails" type="Label" parent="Game/Control/Areas/House/BedroomActions" unique_id=1774917411 node_paths=PackedStringArray("email_title1", "email_title2")]
 visible = false
@@ -1743,7 +1705,5 @@ text = "Buy Camera"
 [connection signal="button_down" from="Game/Control/Areas/House/BedroomActions/ComputerButtons/Stream" to="Game/Control/Areas" method="_on_stream_button_down"]
 [connection signal="button_down" from="Game/Control/Areas/House/BedroomActions/ComputerButtons/VideoGames" to="Game/Control/Areas" method="_on_video_games_button_down"]
 [connection signal="button_down" from="Game/Control/Areas/House/BedroomActions/ComputerButtons/Emails" to="Game/Control/Areas" method="_on_emails_button_down"]
-[connection signal="button_down" from="Game/Control/Areas/House/BedroomActions/StreamingButtons/GamingStream" to="Game/Control/Areas" method="_on_gaming_stream_button_down"]
-[connection signal="button_down" from="Game/Control/Areas/House/BedroomActions/StreamingButtons/Camshow" to="Game/Control/Areas" method="_on_camshow_button_down"]
 [connection signal="Cameras" from="Game/Control/InventoryUI/MyInventory" to="Game/Control/Areas" method="_on_my_inventory_cameras"]
 [connection signal="button_down" from="Game/Control/InventoryUI/MyInventory/TestCameraButton" to="Game/Control/InventoryUI/MyInventory" method="_on_test_camera_button_button_down"]

@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://d3uyj6wjhhnvm"]
+
+[ext_resource type="Texture2D" uid="uid://b37i3i0ojx2g4" path="res://Assets/Sprites/black-background-with-a-light-shining-on-it-free-photo.jpg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://b2rxmsv3db0qf" path="res://main.gd" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://csgcxkoxaxcdk" path="res://ui_bar.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://0iaf8h6s0m85" path="res://ui_bar_right.tscn" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://cu3s1plhhsxu3" path="res://Assets/Sprites/Small Arrow.png" id="5_lquwl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+
+[node name="Main" type="Sprite2D" unique_id=227227668]
+scale = Vector2(2.9906542, 3.0857143)
+texture = ExtResource("1_ig7tw")
+centered = false
+script = ExtResource("2_h2yge")
+
+[node name="UIBarLeft" parent="." unique_id=1805744068 instance=ExtResource("3_1bvp3")]
+visible = false
+scale = Vector2(0.5, 0.54347825)
+
+[node name="UIBarRight" parent="." unique_id=521181357 instance=ExtResource("4_1bvp3")]
+visible = false
+position = Vector2(486.85, 0)
+scale = Vector2(0.6332654, 0.54347825)
+
+[node name="LeftUIBarToggle" type="Button" parent="." unique_id=1956501343]
+offset_right = 50.000015
+offset_bottom = 24.953705
+theme_override_styles/normal = SubResource("StyleBoxFlat_7mycd")
+text = "            "
+
+[node name="TextureRect" type="TextureRect" parent="LeftUIBarToggle" unique_id=1659559325]
+layout_mode = 0
+offset_left = 16.050005
+offset_top = 2.5925925
+offset_right = 1991.05
+offset_bottom = 1903.5187
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("5_lquwl")
+
+[node name="RightUIBarToggle" type="Button" parent="." unique_id=541404623]
+offset_left = 591.175
+offset_right = 641.175
+offset_bottom = 24.953701
+theme_override_styles/normal = SubResource("StyleBoxFlat_7mycd")
+text = "            "
+
+[node name="TextureRect" type="TextureRect" parent="RightUIBarToggle" unique_id=1513391354]
+layout_mode = 0
+offset_left = 16.050005
+offset_top = 2.5925925
+offset_right = 1991.05
+offset_bottom = 1903.5187
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("5_lquwl")
+flip_h = true
+
+[connection signal="button_down" from="LeftUIBarToggle" to="." method="_on_left_ui_bar_toggle_button_down"]
+[connection signal="button_down" from="RightUIBarToggle" to="." method="_on_right_ui_bar_toggle_button_down"]

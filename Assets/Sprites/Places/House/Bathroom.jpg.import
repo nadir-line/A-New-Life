@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crnrl4hio2qey"
-path="res://.godot/imported/bathroom.jpg-aa2de432ac6379103002ea45c92bbfc0.ctex"
+path="res://.godot/imported/Bathroom.jpg-11b10dedabfdc731b8555476e2cb8f03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/places/house/bathroom.jpg"
-dest_files=["res://.godot/imported/bathroom.jpg-aa2de432ac6379103002ea45c92bbfc0.ctex"]
+source_file="res://assets/sprites/Places/House/Bathroom.jpg"
+dest_files=["res://.godot/imported/Bathroom.jpg-11b10dedabfdc731b8555476e2cb8f03.ctex"]
 
 [params]
 

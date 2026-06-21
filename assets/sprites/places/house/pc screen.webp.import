@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx7suc2g77jfh"
-path="res://.godot/imported/pc screen.webp-4c8aacd56b7a17dc07cbb78aea1dabf6.ctex"
+path="res://.godot/imported/pc screen.webp-166cd900368a9ce615267011b79ca400.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/places/house/pc screen.webp"
-dest_files=["res://.godot/imported/pc screen.webp-4c8aacd56b7a17dc07cbb78aea1dabf6.ctex"]
+source_file="res://assets/sprites/Places/House/pc screen.webp"
+dest_files=["res://.godot/imported/pc screen.webp-166cd900368a9ce615267011b79ca400.ctex"]
 
 [params]
 

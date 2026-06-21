@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://boenmlimdhtc4"
-path="res://.godot/imported/B612Mono-Italic.ttf-f509ccd0379d41a72ba518b626b5270b.fontdata"
+path="res://.godot/imported/B612Mono-Italic.ttf-8e2f3c8a8bc93fc2201e9c99d0360036.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/B612Mono-Italic.ttf"
-dest_files=["res://.godot/imported/B612Mono-Italic.ttf-f509ccd0379d41a72ba518b626b5270b.fontdata"]
+source_file="res://assets/Fonts/B612Mono-Italic.ttf"
+dest_files=["res://.godot/imported/B612Mono-Italic.ttf-8e2f3c8a8bc93fc2201e9c99d0360036.fontdata"]
 
 [params]
 

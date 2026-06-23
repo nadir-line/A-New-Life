@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://jnbeax52n355"]
 
-[ext_resource type="Script" uid="uid://sesp3flu0o08" path="res://Code/ui/slot.gd" id="1_c24ra"]
+[ext_resource type="Script" uid="uid://sesp3flu0o08" path="res://code/ui/slot.gd" id="1_c24ra"]
 [ext_resource type="Texture2D" uid="uid://dsisximf2yhn3" path="res://icon.svg" id="1_khion"]
-[ext_resource type="FontFile" uid="uid://b3vssdigv3x12" path="res://Assets/fonts_2/b612_mono_regular.ttf" id="3_hiqfk"]
+[ext_resource type="FontFile" uid="uid://b3vssdigv3x12" path="res://assets/fonts_2/b612_mono_regular.ttf" id="3_hiqfk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8ag6o"]
 font = ExtResource("3_hiqfk")

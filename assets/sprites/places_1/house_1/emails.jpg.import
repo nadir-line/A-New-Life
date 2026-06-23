@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnmulew8igqqf"
-path="res://.godot/imported/emails.jpg-b961047d185480131eb00bd6f5e5b7bf.ctex"
+path="res://.godot/imported/emails.jpg-941669006597a22ea44cde46121f5443.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/places_1/house_1/emails.jpg"
-dest_files=["res://.godot/imported/emails.jpg-b961047d185480131eb00bd6f5e5b7bf.ctex"]
+source_file="res://assets/sprites/places_1/house_1/emails.jpg"
+dest_files=["res://.godot/imported/emails.jpg-941669006597a22ea44cde46121f5443.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbmv6rg7jfb15"
-path="res://.godot/imported/merging_arrows.png-6a6c2784008e38a3a9bfa5a72492134f.ctex"
+path="res://.godot/imported/merging_arrows.png-b6c6ec19663baf0f1e42f237efbb6019.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/merging_arrows.png"
-dest_files=["res://.godot/imported/merging_arrows.png-6a6c2784008e38a3a9bfa5a72492134f.ctex"]
+source_file="res://assets/sprites/merging_arrows.png"
+dest_files=["res://.godot/imported/merging_arrows.png-b6c6ec19663baf0f1e42f237efbb6019.ctex"]
 
 [params]
 

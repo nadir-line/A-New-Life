@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bjsqp2aktmfqj" path="res://assets/sprites/ui_1/female_symbol.png" id="10_efxa6"]
 [ext_resource type="Texture2D" uid="uid://na5qrgwnqtmo" path="res://assets/sprites/ui_1/male_symbol.png" id="11_dg77c"]
 [ext_resource type="Texture2D" uid="uid://bn0ypsb357jqt" path="res://assets/sprites/places_1/house_1/single_bedroom.jpg" id="12_dg77c"]
-[ext_resource type="Script" uid="uid://d4ieoablcuowv" path="res://code/areas_2/areas_1.gd" id="12_ycdy4"]
+[ext_resource type="Script" uid="uid://d4ieoablcuowv" path="res://Code/areas_2/areas_1.gd" id="12_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://d2ycvmrmovoq0" path="res://assets/sprites/places_1/house_1/bathroom_1.jpg" id="14_w48qg"]
 [ext_resource type="Texture2D" uid="uid://ch024dts56df3" path="res://assets/sprites/places_1/house_1/streaming_studio.jpg" id="15_0odxb"]
 [ext_resource type="Texture2D" uid="uid://ci28eijw5clh8" path="res://assets/sprites/places_1/house_1/pc_screen.webp" id="15_82xsv"]
